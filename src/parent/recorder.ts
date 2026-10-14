@@ -2,14 +2,15 @@ import type { Lang } from '../main';
 import { phraseIds, text } from '../core/content';
 import { play, recordedAt, setRecorded } from '../core/audio';
 import { el } from '../ui/dom';
+import { GAMES } from '../catalog';
+import { dirOf } from '../core/langs';
 
 const SECTIONS: { name: string; match: (id: string) => boolean }[] = [
-  { name: '🙋 I Want…', match: id => id.startsWith('say.') },
-  { name: '📍 Where Is It?', match: id => id.startsWith('where.') },
+  // One tab per game that has sounds, named as on the home screen.
+  ...GAMES.filter(g => g.sounds).map(g => ({ name: `${g.icon} ${g.name}`, match: (id: string) => id.startsWith(g.sounds!) })),
   { name: '🔤 Words', match: id => id.startsWith('w.') || id.startsWith('pos.') },
   { name: '⭐ Praise', match: id => id.startsWith('ui.') },
 ];
-const RTL: Lang[] = ['arz', 'ar'];
 
 export function startRecorder(app: HTMLElement, lang: Lang, onExit: () => void) {
   let stream: MediaStream | null = null;
@@ -25,7 +26,7 @@ export function startRecorder(app: HTMLElement, lang: Lang, onExit: () => void) 
   bar.append(back, el('h1', '', `🎙 ${lang.toUpperCase()}`));
   const tabs = el('div', 'rec-tabs');
   const list = el('div', 'rec-list');
-  list.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+  list.dir = dirOf(lang);
   app.replaceChildren(bar, tabs, list);
 
   for (const s of SECTIONS) {

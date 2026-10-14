@@ -4,6 +4,8 @@ import { play, stop } from '../core/audio';
 import { levelFor } from '../core/level';
 import { makeDraggable } from '../core/drag';
 import { el } from '../ui/dom';
+import { dirOf } from '../core/langs';
+import { gameScreen, endScreen, wait } from '../ui/shell';
 
 type Mode = 'learn' | 'listen' | 'say' | 'build';
 type Group = 'all' | 'action' | 'thing' | 'feel' | 'social';
@@ -14,9 +16,7 @@ const GROUPS: { id: Group; icon: string }[] = [
 ];
 const CHOICES = [2, 3, 4];
 const ROUNDS = 10;
-const RTL: Lang[] = ['arz', 'ar'];
 
-const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   const level = levelFor('want', lang);
@@ -29,22 +29,6 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   let token = 0;
   let say = () => Promise.resolve();
 
-  const back = el('button', 'back', '←');
-  const modes = el('div', 'modes');
-  const modeBtns: Record<Mode, HTMLButtonElement> = {
-    learn: el('button', '', '📖'), listen: el('button', '', '👂'), say: el('button', '', '🗣'), build: el('button', '', '🧩'),
-  };
-  for (const [m, b] of Object.entries(modeBtns)) {
-    b.onclick = () => setMode(m as Mode);
-    modes.append(b);
-  }
-  const badge = el('span', 'badge');
-  const replay = el('button', 'replay', '🔊');
-  const bar = el('header', 'game-bar');
-  bar.append(back, modes, el('span', 'spacer'), badge, replay);
-  const progress = el('div', 'progress');
-  const fill = el('i');
-  progress.append(fill);
   const groups = el('div', 'groups');
   for (const g of GROUPS) {
     const b = el('button', g.id === group ? 'on' : '', g.icon);
@@ -55,15 +39,16 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     };
     groups.append(b);
   }
-  const stage = el('main', 'stage');
-  app.replaceChildren(bar, progress, groups, stage);
+  const ui = gameScreen<Mode>(app, { learn: '📖', listen: '👂', say: '🗣', build: '🧩' }, groups);
+  const stage = ui.stage;
+  for (const [m, b] of Object.entries(ui.modeBtns)) b.onclick = () => setMode(m as Mode);
 
   const exit = () => { token++; stop(); onExit(); };
-  back.onclick = exit;
-  replay.onclick = () => say();
+  ui.back.onclick = exit;
+  ui.replay.onclick = () => say();
   const setMode = (m: Mode) => {
     mode = m;
-    for (const [k, b] of Object.entries(modeBtns)) b.classList.toggle('on', k === m);
+    ui.showMode(m);
     restart();
   };
 
@@ -81,8 +66,8 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   function next() {
     token++;
     if (mode === 'learn') return learnScreen(0);
-    badge.textContent = mode === 'say' ? '' : '●'.repeat(lvl().value) + '○'.repeat(3 - lvl().value);
-    fill.style.width = `${(round / ROUNDS) * 100}%`;
+    ui.showLevel(mode === 'say' ? null : lvl().value);
+    ui.showProgress(round / ROUNDS);
     if (round >= ROUNDS) showEnd();
     else if (mode === 'say') sayRound();
     else if (mode === 'build') buildRound();
@@ -106,14 +91,14 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     const list = pool();
     const s = list[i];
     const id = `say.${s.id}`;
-    badge.textContent = '';
-    fill.style.width = `${((i + 1) / list.length) * 100}%`;
+    ui.showLevel(null);
+    ui.showProgress((i + 1) / list.length);
     say = () => play(id, lang);
 
     const pic = el('button', 'phrase-pic', s.pic);
     pic.onclick = () => say();
     const words = el('div', 'phrase-words');
-    words.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    words.dir = dirOf(lang);
     s.tokens[lang].forEach((w, k) => {
       const b = el('button', 'word', w);
       b.onclick = () => play(`${id}.${k}`, lang);
@@ -172,7 +157,7 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     say = () => Promise.resolve();
 
     const words = el('div', 'phrase-words');
-    words.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    words.dir = dirOf(lang);
     const show = (k: number) => {
       open.add(k);
       cards[k].textContent = tokens[k];
@@ -238,7 +223,7 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     let firstTry = true;
     say = () => play(id, lang);
 
-    const dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    const dir = dirOf(lang);
     const slots = el('div', 'phrase-words slots');
     slots.dir = dir;
     const slotEls = tokens.map((w, k) => {
@@ -302,15 +287,7 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
 
   function showEnd() {
     say = () => play('ui.great', lang);
-    const again = el('button', 'big', '↻');
-    again.onclick = restart;
-    const home = el('button', 'big', '←');
-    home.onclick = exit;
-    const row = el('div', 'row');
-    row.append(again, home);
-    const end = el('div', 'end');
-    end.append(el('div', 'stars', '⭐'.repeat(Math.max(stars, 1))), row);
-    stage.replaceChildren(end);
+    endScreen(stage, stars, restart, exit);
     say();
   }
 

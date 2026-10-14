@@ -5,12 +5,13 @@ import path from 'node:path';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const content = JSON.parse(fs.readFileSync(path.join(root, 'data/content.json'), 'utf8'));
+const langs = JSON.parse(fs.readFileSync(path.join(root, 'data/langs.json'), 'utf8'));
 
-const VOICES = { en: 'en-US-AnaNeural', uk: 'uk-UA-OstapNeural', arz: 'ar-EG-ShakirNeural', ar: 'ar-EG-SalmaNeural' };
+const LANGS = Object.keys(langs);
+const VOICES = Object.fromEntries(LANGS.map(l => [l, langs[l].voice]));
+const XML_LANG = Object.fromEntries(LANGS.map(l => [l, langs[l].xmlLang]));
 // Egyptian sounds more natural without vowel marks (voice test, 2026-10-14); the screen text keeps them.
 const spoken = (lang, text) => lang === 'arz' ? text.replace(/[\u064B-\u0652]/g, '') : text;
-const XML_LANG = { en: 'en-US', uk: 'uk-UA', arz: 'ar-EG', ar: 'ar-EG' };
-const LANGS = Object.keys(VOICES);
 
 const fill = (tpl, vars) => tpl.replace(/\{(\w+)\}/g, (_, k) => {
   if (!(k in vars)) throw new Error(`missing {${k}} in "${tpl}"`);

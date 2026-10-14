@@ -3,8 +3,11 @@ import { VitePWA } from 'vite-plugin-pwa';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import langs from './data/langs.json';
 
 const REC = path.resolve('public/rec');
+// Only these recording names are accepted: <lang>/<id>, e.g. uk/say.eat.
+const KEY = new RegExp(`^(${Object.keys(langs).join('|')})/[\\w.]+$`);
 
 // public/rec/index.json lists every recording with the time it was saved.
 function updateIndex() {
@@ -28,7 +31,7 @@ function recorder(): Plugin {
     configureServer(server) {
       server.middlewares.use('/__rec', (req, res) => {
         const key = decodeURIComponent((req.url ?? '').slice(1));
-        if (!/^(en|uk|arz|ar)\/[\w.]+$/.test(key)) { res.statusCode = 400; res.end(); return; }
+        if (!KEY.test(key)) { res.statusCode = 400; res.end(); return; }
         const mp3 = path.join(REC, `${key}.mp3`);
         if (req.method === 'DELETE') {
           fs.rmSync(mp3, { force: true });

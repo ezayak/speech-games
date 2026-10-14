@@ -3,49 +3,11 @@ import { el } from './ui/dom';
 import { startWhere } from './games/where';
 import { startWant } from './games/want';
 import { startRecorder } from './parent/recorder';
+import { CATEGORIES, type Category } from './catalog';
+import { LANGS, label, type Lang } from './core/langs';
 
-export type Lang = 'en' | 'uk' | 'arz' | 'ar';
-
-interface Game { id: string; icon: string; name: string; ready: boolean }
-interface Category { id: string; icon: string; name: string; games: Game[] }
-
-const LANGS: { id: Lang; label: string }[] = [
-  { id: 'en', label: 'EN' },
-  { id: 'uk', label: 'УКР' },
-  { id: 'arz', label: 'مصري' },
-  { id: 'ar', label: 'فصحى' },
-];
-
-const CATEGORIES: Category[] = [
-  { id: 'listening', icon: '👂', name: 'Listening', games: [
-    { id: 'listen-tap', icon: '👆', name: 'Listen & Tap', ready: false },
-    { id: 'follow', icon: '📦', name: 'Follow Instructions', ready: false },
-    { id: 'yes-no', icon: '✅', name: 'Yes / No', ready: false },
-    { id: 'story', icon: '📚', name: 'Story Time', ready: false },
-  ]},
-  { id: 'concepts', icon: '🧩', name: 'Concepts', games: [
-    { id: 'where', icon: '📍', name: 'Where Is It?', ready: true },
-    { id: 'size', icon: '🐘', name: 'Big & Small', ready: false },
-    { id: 'taste', icon: '🍋', name: 'Taste It', ready: false },
-  ]},
-  { id: 'speaking', icon: '🗣️', name: 'Speaking', games: [
-    { id: 'want', icon: '🙋', name: 'I Want…', ready: true },
-    { id: 'say-it', icon: '💬', name: 'Say It', ready: false },
-    { id: 'finish', icon: '✏️', name: 'Finish the Sentence', ready: false },
-    { id: 'tell-me', icon: '🖼️', name: 'Tell Me About It', ready: false },
-  ]},
-  { id: 'reading', icon: '📖', name: 'Reading', games: [
-    { id: 'read-match', icon: '🔗', name: 'Read & Match', ready: false },
-    { id: 'pick-word', icon: '🔤', name: 'Pick the Word', ready: false },
-    { id: 'read-sentence', icon: '📝', name: 'Read the Sentence', ready: false },
-    { id: 'read-aloud', icon: '🔊', name: 'Read Aloud', ready: false },
-  ]},
-  { id: 'school', icon: '🏫', name: 'School', games: [
-    { id: 'classroom', icon: '✏️', name: 'Classroom Words', ready: false },
-    { id: 'teacher-says', icon: '🧑‍🏫', name: 'Teacher Says', ready: false },
-    { id: 'questions', icon: '❓', name: 'Question Words', ready: false },
-  ]},
-];
+// Other files import Lang from here; it now comes from data/langs.json.
+export type { Lang };
 
 const app = document.getElementById('app')!;
 
@@ -69,9 +31,9 @@ function header(title: string, onBack?: () => void): HTMLElement {
   h.append(el('h1', '', title));
   const langs = el('div', 'langs');
   for (const l of LANGS) {
-    const b = el('button', l.id === lang ? 'on' : '', l.label);
+    const b = el('button', l === lang ? 'on' : '', label(l));
     b.onclick = () => {
-      setLang(l.id);
+      setLang(l);
       langs.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
     };
     langs.append(b);

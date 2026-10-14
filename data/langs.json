@@ -1,0 +1,6 @@
+{
+  "en":  { "label": "EN",   "rtl": false, "voice": "en-US-AnaNeural",    "xmlLang": "en-US" },
+  "uk":  { "label": "УКР",  "rtl": false, "voice": "uk-UA-OstapNeural",  "xmlLang": "uk-UA" },
+  "arz": { "label": "مصري", "rtl": true,  "voice": "ar-EG-ShakirNeural", "xmlLang": "ar-EG" },
+  "ar":  { "label": "فصحى", "rtl": true,  "voice": "ar-EG-SalmaNeural",  "xmlLang": "ar-EG" }
+}

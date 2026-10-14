@@ -5,11 +5,12 @@ import { levelFor } from '../core/level';
 import { makeDraggable } from '../core/drag';
 import { buildScene, type Pos } from '../ui/scene';
 import { el } from '../ui/dom';
+import { dirOf } from '../core/langs';
+import { gameScreen, endScreen, wait } from '../ui/shell';
 
 type Mode = 'learn' | 'understand' | 'do';
 
 const LEARN_ORDER: Pos[] = ['on', 'under', 'in', 'behind', 'front', 'next'];
-const RTL: Lang[] = ['arz', 'ar'];
 
 // Positions used at each level; level 1 keeps only the most different ones.
 const POOLS: Pos[][] = [
@@ -22,7 +23,6 @@ const ROUNDS = 10;
 // Drops further than this from every place (scene units) just go back to the tray.
 const MAX_DROP = 130;
 
-const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
 const allowed = (ref: Word, pool: Pos[]) => (ref.pos as Pos[]).filter(p => pool.includes(p));
 
 export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
@@ -33,31 +33,16 @@ export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
   let token = 0;
   let say = () => Promise.resolve();
 
-  const back = el('button', 'back', '←');
-  const modes = el('div', 'modes');
-  const modeBtns: Record<Mode, HTMLButtonElement> = {
-    learn: el('button', '', '📖'), understand: el('button', '', '👆'), do: el('button', '', '✋'),
-  };
-  for (const [m, b] of Object.entries(modeBtns)) {
-    b.onclick = () => setMode(m as Mode);
-    modes.append(b);
-  }
-  const badge = el('span', 'badge');
-  const replay = el('button', 'replay', '🔊');
-  const bar = el('header', 'game-bar');
-  bar.append(back, modes, el('span', 'spacer'), badge, replay);
-  const progress = el('div', 'progress');
-  const fill = el('i');
-  progress.append(fill);
-  const stage = el('main', 'stage');
-  app.replaceChildren(bar, progress, stage);
+  const ui = gameScreen<Mode>(app, { learn: '📖', understand: '👆', do: '✋' });
+  const stage = ui.stage;
+  for (const [m, b] of Object.entries(ui.modeBtns)) b.onclick = () => setMode(m as Mode);
 
   const exit = () => { token++; stop(); onExit(); };
-  back.onclick = exit;
-  replay.onclick = () => say();
+  ui.back.onclick = exit;
+  ui.replay.onclick = () => say();
   const setMode = (m: Mode) => {
     mode = m;
-    for (const [k, b] of Object.entries(modeBtns)) b.classList.toggle('on', k === m);
+    ui.showMode(m);
     restart();
   };
 
@@ -66,8 +51,8 @@ export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
   function next() {
     token++;
     if (mode === 'learn') return learnScreen(0);
-    badge.textContent = '●'.repeat(level.value) + '○'.repeat(3 - level.value);
-    fill.style.width = `${(round / ROUNDS) * 100}%`;
+    ui.showLevel(level.value);
+    ui.showProgress(round / ROUNDS);
     if (round >= ROUNDS) showEnd();
     else if (mode === 'understand') understandRound();
     else doRound();
@@ -162,8 +147,8 @@ export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
   function learnScreen(i: number) {
     const t = ++token;
     const pos = LEARN_ORDER[i];
-    badge.textContent = '';
-    fill.style.width = `${((i + 1) / LEARN_ORDER.length) * 100}%`;
+    ui.showLevel(null);
+    ui.showProgress((i + 1) / LEARN_ORDER.length);
     const ref = pick(byTag('where-ref').filter(r => r.pos!.includes(pos)), 1)[0];
     const obj = pick(byTag('where-obj'), 1)[0];
     const sentenceId = `where.at.${obj.id}.${pos}.${ref.id}`;
@@ -176,7 +161,7 @@ export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
     };
 
     const card = el('div', 'learn');
-    card.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    card.dir = dirOf(lang);
     const word = el('button', 'learn-word', text(`pos.${pos}`, lang));
     word.onclick = () => sayWord();
     const s = buildScene(obj, ref);
@@ -201,15 +186,7 @@ export function startWhere(app: HTMLElement, lang: Lang, onExit: () => void) {
 
   function showEnd() {
     say = () => play('ui.great', lang);
-    const again = el('button', 'big', '↻');
-    again.onclick = restart;
-    const home = el('button', 'big', '←');
-    home.onclick = exit;
-    const row = el('div', 'row');
-    row.append(again, home);
-    const end = el('div', 'end');
-    end.append(el('div', 'stars', '⭐'.repeat(Math.max(stars, 1))), row);
-    stage.replaceChildren(end);
+    endScreen(stage, stars, restart, exit);
     say();
   }
 
