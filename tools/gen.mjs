@@ -76,7 +76,7 @@ async function synth(lang, text) {
         'Ocp-Apim-Subscription-Key': KEY,
         'Content-Type': 'application/ssml+xml',
         'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
-        'User-Agent': 'alex-speech-games',
+        'User-Agent': 'speech-games',
       },
       body: ssml,
     });
