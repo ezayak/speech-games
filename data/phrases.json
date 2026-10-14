@@ -1,0 +1,1628 @@
+{
+ "w.cat": {
+  "en": "cat",
+  "uk": "кіт",
+  "arz": "قُطّة",
+  "ar": "قِطّة"
+ },
+ "w.dog": {
+  "en": "dog",
+  "uk": "собака",
+  "arz": "كَلْب",
+  "ar": "كَلْب"
+ },
+ "w.ball": {
+  "en": "ball",
+  "uk": "м'яч",
+  "arz": "كورة",
+  "ar": "كُرة"
+ },
+ "w.teddy": {
+  "en": "teddy bear",
+  "uk": "ведмедик",
+  "arz": "دَبْدوب",
+  "ar": "دُبّ"
+ },
+ "w.apple": {
+  "en": "apple",
+  "uk": "яблуко",
+  "arz": "تُفّاحة",
+  "ar": "تُفّاحة"
+ },
+ "w.book": {
+  "en": "book",
+  "uk": "книжка",
+  "arz": "كِتاب",
+  "ar": "كِتاب"
+ },
+ "w.table": {
+  "en": "table",
+  "uk": "стіл",
+  "arz": "تَرابيزة",
+  "ar": "طاوِلة"
+ },
+ "w.box": {
+  "en": "box",
+  "uk": "коробка",
+  "arz": "كَرْتونة",
+  "ar": "صُنْدوق"
+ },
+ "w.chair": {
+  "en": "chair",
+  "uk": "стілець",
+  "arz": "كُرْسي",
+  "ar": "كُرْسي"
+ },
+ "w.bed": {
+  "en": "bed",
+  "uk": "ліжко",
+  "arz": "سِرير",
+  "ar": "سَرير"
+ },
+ "w.bag": {
+  "en": "bag",
+  "uk": "рюкзак",
+  "arz": "شَنْطة",
+  "ar": "حَقيبة"
+ },
+ "pos.in": {
+  "en": "in",
+  "uk": "у",
+  "arz": "جُوّه",
+  "ar": "في"
+ },
+ "pos.on": {
+  "en": "on",
+  "uk": "на",
+  "arz": "على",
+  "ar": "على"
+ },
+ "pos.under": {
+  "en": "under",
+  "uk": "під",
+  "arz": "تَحْت",
+  "ar": "تَحْت"
+ },
+ "pos.behind": {
+  "en": "behind",
+  "uk": "за",
+  "arz": "وَرا",
+  "ar": "خَلْف"
+ },
+ "pos.front": {
+  "en": "in front of",
+  "uk": "перед",
+  "arz": "قُدّام",
+  "ar": "أَمام"
+ },
+ "pos.next": {
+  "en": "next to",
+  "uk": "біля",
+  "arz": "جَنْب",
+  "ar": "بِجانِب"
+ },
+ "ui.great": {
+  "en": "Well done!",
+  "uk": "Молодець!",
+  "arz": "شاطِر!",
+  "ar": "أَحْسَنْت!"
+ },
+ "ui.again": {
+  "en": "Listen again.",
+  "uk": "Послухай ще раз.",
+  "arz": "اِسْمَع تاني.",
+  "ar": "اِسْتَمِعْ مَرّةً أُخْرى."
+ },
+ "where.at.cat.on.table": {
+  "en": "The cat is on the table.",
+  "uk": "Кіт на столі.",
+  "arz": "القُطّة على التَّرابيزة.",
+  "ar": "القِطّة على الطّاوِلة."
+ },
+ "where.at.cat.under.table": {
+  "en": "The cat is under the table.",
+  "uk": "Кіт під столом.",
+  "arz": "القُطّة تَحْت التَّرابيزة.",
+  "ar": "القِطّة تَحْت الطّاوِلة."
+ },
+ "where.at.cat.behind.table": {
+  "en": "The cat is behind the table.",
+  "uk": "Кіт за столом.",
+  "arz": "القُطّة وَرا التَّرابيزة.",
+  "ar": "القِطّة خَلْف الطّاوِلة."
+ },
+ "where.at.cat.front.table": {
+  "en": "The cat is in front of the table.",
+  "uk": "Кіт перед столом.",
+  "arz": "القُطّة قُدّام التَّرابيزة.",
+  "ar": "القِطّة أَمام الطّاوِلة."
+ },
+ "where.at.cat.next.table": {
+  "en": "The cat is next to the table.",
+  "uk": "Кіт біля столу.",
+  "arz": "القُطّة جَنْب التَّرابيزة.",
+  "ar": "القِطّة بِجانِب الطّاوِلة."
+ },
+ "where.at.cat.in.box": {
+  "en": "The cat is in the box.",
+  "uk": "Кіт у коробці.",
+  "arz": "القُطّة جُوّه الكَرْتونة.",
+  "ar": "القِطّة في الصُّنْدوق."
+ },
+ "where.at.cat.behind.box": {
+  "en": "The cat is behind the box.",
+  "uk": "Кіт за коробкою.",
+  "arz": "القُطّة وَرا الكَرْتونة.",
+  "ar": "القِطّة خَلْف الصُّنْدوق."
+ },
+ "where.at.cat.front.box": {
+  "en": "The cat is in front of the box.",
+  "uk": "Кіт перед коробкою.",
+  "arz": "القُطّة قُدّام الكَرْتونة.",
+  "ar": "القِطّة أَمام الصُّنْدوق."
+ },
+ "where.at.cat.next.box": {
+  "en": "The cat is next to the box.",
+  "uk": "Кіт біля коробки.",
+  "arz": "القُطّة جَنْب الكَرْتونة.",
+  "ar": "القِطّة بِجانِب الصُّنْدوق."
+ },
+ "where.at.cat.on.chair": {
+  "en": "The cat is on the chair.",
+  "uk": "Кіт на стільці.",
+  "arz": "القُطّة على الكُرْسي.",
+  "ar": "القِطّة على الكُرْسي."
+ },
+ "where.at.cat.under.chair": {
+  "en": "The cat is under the chair.",
+  "uk": "Кіт під стільцем.",
+  "arz": "القُطّة تَحْت الكُرْسي.",
+  "ar": "القِطّة تَحْت الكُرْسي."
+ },
+ "where.at.cat.behind.chair": {
+  "en": "The cat is behind the chair.",
+  "uk": "Кіт за стільцем.",
+  "arz": "القُطّة وَرا الكُرْسي.",
+  "ar": "القِطّة خَلْف الكُرْسي."
+ },
+ "where.at.cat.front.chair": {
+  "en": "The cat is in front of the chair.",
+  "uk": "Кіт перед стільцем.",
+  "arz": "القُطّة قُدّام الكُرْسي.",
+  "ar": "القِطّة أَمام الكُرْسي."
+ },
+ "where.at.cat.next.chair": {
+  "en": "The cat is next to the chair.",
+  "uk": "Кіт біля стільця.",
+  "arz": "القُطّة جَنْب الكُرْسي.",
+  "ar": "القِطّة بِجانِب الكُرْسي."
+ },
+ "where.at.cat.on.bed": {
+  "en": "The cat is on the bed.",
+  "uk": "Кіт на ліжку.",
+  "arz": "القُطّة على السِّرير.",
+  "ar": "القِطّة على السَّرير."
+ },
+ "where.at.cat.under.bed": {
+  "en": "The cat is under the bed.",
+  "uk": "Кіт під ліжком.",
+  "arz": "القُطّة تَحْت السِّرير.",
+  "ar": "القِطّة تَحْت السَّرير."
+ },
+ "where.at.cat.next.bed": {
+  "en": "The cat is next to the bed.",
+  "uk": "Кіт біля ліжка.",
+  "arz": "القُطّة جَنْب السِّرير.",
+  "ar": "القِطّة بِجانِب السَّرير."
+ },
+ "where.at.cat.in.bag": {
+  "en": "The cat is in the bag.",
+  "uk": "Кіт у рюкзаку.",
+  "arz": "القُطّة جُوّه الشَّنْطة.",
+  "ar": "القِطّة في الحَقيبة."
+ },
+ "where.at.cat.behind.bag": {
+  "en": "The cat is behind the bag.",
+  "uk": "Кіт за рюкзаком.",
+  "arz": "القُطّة وَرا الشَّنْطة.",
+  "ar": "القِطّة خَلْف الحَقيبة."
+ },
+ "where.at.cat.front.bag": {
+  "en": "The cat is in front of the bag.",
+  "uk": "Кіт перед рюкзаком.",
+  "arz": "القُطّة قُدّام الشَّنْطة.",
+  "ar": "القِطّة أَمام الحَقيبة."
+ },
+ "where.at.cat.next.bag": {
+  "en": "The cat is next to the bag.",
+  "uk": "Кіт біля рюкзака.",
+  "arz": "القُطّة جَنْب الشَّنْطة.",
+  "ar": "القِطّة بِجانِب الحَقيبة."
+ },
+ "where.at.dog.on.table": {
+  "en": "The dog is on the table.",
+  "uk": "Собака на столі.",
+  "arz": "الكَلْب على التَّرابيزة.",
+  "ar": "الكَلْب على الطّاوِلة."
+ },
+ "where.at.dog.under.table": {
+  "en": "The dog is under the table.",
+  "uk": "Собака під столом.",
+  "arz": "الكَلْب تَحْت التَّرابيزة.",
+  "ar": "الكَلْب تَحْت الطّاوِلة."
+ },
+ "where.at.dog.behind.table": {
+  "en": "The dog is behind the table.",
+  "uk": "Собака за столом.",
+  "arz": "الكَلْب وَرا التَّرابيزة.",
+  "ar": "الكَلْب خَلْف الطّاوِلة."
+ },
+ "where.at.dog.front.table": {
+  "en": "The dog is in front of the table.",
+  "uk": "Собака перед столом.",
+  "arz": "الكَلْب قُدّام التَّرابيزة.",
+  "ar": "الكَلْب أَمام الطّاوِلة."
+ },
+ "where.at.dog.next.table": {
+  "en": "The dog is next to the table.",
+  "uk": "Собака біля столу.",
+  "arz": "الكَلْب جَنْب التَّرابيزة.",
+  "ar": "الكَلْب بِجانِب الطّاوِلة."
+ },
+ "where.at.dog.in.box": {
+  "en": "The dog is in the box.",
+  "uk": "Собака у коробці.",
+  "arz": "الكَلْب جُوّه الكَرْتونة.",
+  "ar": "الكَلْب في الصُّنْدوق."
+ },
+ "where.at.dog.behind.box": {
+  "en": "The dog is behind the box.",
+  "uk": "Собака за коробкою.",
+  "arz": "الكَلْب وَرا الكَرْتونة.",
+  "ar": "الكَلْب خَلْف الصُّنْدوق."
+ },
+ "where.at.dog.front.box": {
+  "en": "The dog is in front of the box.",
+  "uk": "Собака перед коробкою.",
+  "arz": "الكَلْب قُدّام الكَرْتونة.",
+  "ar": "الكَلْب أَمام الصُّنْدوق."
+ },
+ "where.at.dog.next.box": {
+  "en": "The dog is next to the box.",
+  "uk": "Собака біля коробки.",
+  "arz": "الكَلْب جَنْب الكَرْتونة.",
+  "ar": "الكَلْب بِجانِب الصُّنْدوق."
+ },
+ "where.at.dog.on.chair": {
+  "en": "The dog is on the chair.",
+  "uk": "Собака на стільці.",
+  "arz": "الكَلْب على الكُرْسي.",
+  "ar": "الكَلْب على الكُرْسي."
+ },
+ "where.at.dog.under.chair": {
+  "en": "The dog is under the chair.",
+  "uk": "Собака під стільцем.",
+  "arz": "الكَلْب تَحْت الكُرْسي.",
+  "ar": "الكَلْب تَحْت الكُرْسي."
+ },
+ "where.at.dog.behind.chair": {
+  "en": "The dog is behind the chair.",
+  "uk": "Собака за стільцем.",
+  "arz": "الكَلْب وَرا الكُرْسي.",
+  "ar": "الكَلْب خَلْف الكُرْسي."
+ },
+ "where.at.dog.front.chair": {
+  "en": "The dog is in front of the chair.",
+  "uk": "Собака перед стільцем.",
+  "arz": "الكَلْب قُدّام الكُرْسي.",
+  "ar": "الكَلْب أَمام الكُرْسي."
+ },
+ "where.at.dog.next.chair": {
+  "en": "The dog is next to the chair.",
+  "uk": "Собака біля стільця.",
+  "arz": "الكَلْب جَنْب الكُرْسي.",
+  "ar": "الكَلْب بِجانِب الكُرْسي."
+ },
+ "where.at.dog.on.bed": {
+  "en": "The dog is on the bed.",
+  "uk": "Собака на ліжку.",
+  "arz": "الكَلْب على السِّرير.",
+  "ar": "الكَلْب على السَّرير."
+ },
+ "where.at.dog.under.bed": {
+  "en": "The dog is under the bed.",
+  "uk": "Собака під ліжком.",
+  "arz": "الكَلْب تَحْت السِّرير.",
+  "ar": "الكَلْب تَحْت السَّرير."
+ },
+ "where.at.dog.next.bed": {
+  "en": "The dog is next to the bed.",
+  "uk": "Собака біля ліжка.",
+  "arz": "الكَلْب جَنْب السِّرير.",
+  "ar": "الكَلْب بِجانِب السَّرير."
+ },
+ "where.at.dog.in.bag": {
+  "en": "The dog is in the bag.",
+  "uk": "Собака у рюкзаку.",
+  "arz": "الكَلْب جُوّه الشَّنْطة.",
+  "ar": "الكَلْب في الحَقيبة."
+ },
+ "where.at.dog.behind.bag": {
+  "en": "The dog is behind the bag.",
+  "uk": "Собака за рюкзаком.",
+  "arz": "الكَلْب وَرا الشَّنْطة.",
+  "ar": "الكَلْب خَلْف الحَقيبة."
+ },
+ "where.at.dog.front.bag": {
+  "en": "The dog is in front of the bag.",
+  "uk": "Собака перед рюкзаком.",
+  "arz": "الكَلْب قُدّام الشَّنْطة.",
+  "ar": "الكَلْب أَمام الحَقيبة."
+ },
+ "where.at.dog.next.bag": {
+  "en": "The dog is next to the bag.",
+  "uk": "Собака біля рюкзака.",
+  "arz": "الكَلْب جَنْب الشَّنْطة.",
+  "ar": "الكَلْب بِجانِب الحَقيبة."
+ },
+ "where.at.ball.on.table": {
+  "en": "The ball is on the table.",
+  "uk": "М'яч на столі.",
+  "arz": "الكورة على التَّرابيزة.",
+  "ar": "الكُرة على الطّاوِلة."
+ },
+ "where.at.ball.under.table": {
+  "en": "The ball is under the table.",
+  "uk": "М'яч під столом.",
+  "arz": "الكورة تَحْت التَّرابيزة.",
+  "ar": "الكُرة تَحْت الطّاوِلة."
+ },
+ "where.at.ball.behind.table": {
+  "en": "The ball is behind the table.",
+  "uk": "М'яч за столом.",
+  "arz": "الكورة وَرا التَّرابيزة.",
+  "ar": "الكُرة خَلْف الطّاوِلة."
+ },
+ "where.at.ball.front.table": {
+  "en": "The ball is in front of the table.",
+  "uk": "М'яч перед столом.",
+  "arz": "الكورة قُدّام التَّرابيزة.",
+  "ar": "الكُرة أَمام الطّاوِلة."
+ },
+ "where.at.ball.next.table": {
+  "en": "The ball is next to the table.",
+  "uk": "М'яч біля столу.",
+  "arz": "الكورة جَنْب التَّرابيزة.",
+  "ar": "الكُرة بِجانِب الطّاوِلة."
+ },
+ "where.at.ball.in.box": {
+  "en": "The ball is in the box.",
+  "uk": "М'яч у коробці.",
+  "arz": "الكورة جُوّه الكَرْتونة.",
+  "ar": "الكُرة في الصُّنْدوق."
+ },
+ "where.at.ball.behind.box": {
+  "en": "The ball is behind the box.",
+  "uk": "М'яч за коробкою.",
+  "arz": "الكورة وَرا الكَرْتونة.",
+  "ar": "الكُرة خَلْف الصُّنْدوق."
+ },
+ "where.at.ball.front.box": {
+  "en": "The ball is in front of the box.",
+  "uk": "М'яч перед коробкою.",
+  "arz": "الكورة قُدّام الكَرْتونة.",
+  "ar": "الكُرة أَمام الصُّنْدوق."
+ },
+ "where.at.ball.next.box": {
+  "en": "The ball is next to the box.",
+  "uk": "М'яч біля коробки.",
+  "arz": "الكورة جَنْب الكَرْتونة.",
+  "ar": "الكُرة بِجانِب الصُّنْدوق."
+ },
+ "where.at.ball.on.chair": {
+  "en": "The ball is on the chair.",
+  "uk": "М'яч на стільці.",
+  "arz": "الكورة على الكُرْسي.",
+  "ar": "الكُرة على الكُرْسي."
+ },
+ "where.at.ball.under.chair": {
+  "en": "The ball is under the chair.",
+  "uk": "М'яч під стільцем.",
+  "arz": "الكورة تَحْت الكُرْسي.",
+  "ar": "الكُرة تَحْت الكُرْسي."
+ },
+ "where.at.ball.behind.chair": {
+  "en": "The ball is behind the chair.",
+  "uk": "М'яч за стільцем.",
+  "arz": "الكورة وَرا الكُرْسي.",
+  "ar": "الكُرة خَلْف الكُرْسي."
+ },
+ "where.at.ball.front.chair": {
+  "en": "The ball is in front of the chair.",
+  "uk": "М'яч перед стільцем.",
+  "arz": "الكورة قُدّام الكُرْسي.",
+  "ar": "الكُرة أَمام الكُرْسي."
+ },
+ "where.at.ball.next.chair": {
+  "en": "The ball is next to the chair.",
+  "uk": "М'яч біля стільця.",
+  "arz": "الكورة جَنْب الكُرْسي.",
+  "ar": "الكُرة بِجانِب الكُرْسي."
+ },
+ "where.at.ball.on.bed": {
+  "en": "The ball is on the bed.",
+  "uk": "М'яч на ліжку.",
+  "arz": "الكورة على السِّرير.",
+  "ar": "الكُرة على السَّرير."
+ },
+ "where.at.ball.under.bed": {
+  "en": "The ball is under the bed.",
+  "uk": "М'яч під ліжком.",
+  "arz": "الكورة تَحْت السِّرير.",
+  "ar": "الكُرة تَحْت السَّرير."
+ },
+ "where.at.ball.next.bed": {
+  "en": "The ball is next to the bed.",
+  "uk": "М'яч біля ліжка.",
+  "arz": "الكورة جَنْب السِّرير.",
+  "ar": "الكُرة بِجانِب السَّرير."
+ },
+ "where.at.ball.in.bag": {
+  "en": "The ball is in the bag.",
+  "uk": "М'яч у рюкзаку.",
+  "arz": "الكورة جُوّه الشَّنْطة.",
+  "ar": "الكُرة في الحَقيبة."
+ },
+ "where.at.ball.behind.bag": {
+  "en": "The ball is behind the bag.",
+  "uk": "М'яч за рюкзаком.",
+  "arz": "الكورة وَرا الشَّنْطة.",
+  "ar": "الكُرة خَلْف الحَقيبة."
+ },
+ "where.at.ball.front.bag": {
+  "en": "The ball is in front of the bag.",
+  "uk": "М'яч перед рюкзаком.",
+  "arz": "الكورة قُدّام الشَّنْطة.",
+  "ar": "الكُرة أَمام الحَقيبة."
+ },
+ "where.at.ball.next.bag": {
+  "en": "The ball is next to the bag.",
+  "uk": "М'яч біля рюкзака.",
+  "arz": "الكورة جَنْب الشَّنْطة.",
+  "ar": "الكُرة بِجانِب الحَقيبة."
+ },
+ "where.at.teddy.on.table": {
+  "en": "The teddy bear is on the table.",
+  "uk": "Ведмедик на столі.",
+  "arz": "الدَّبْدوب على التَّرابيزة.",
+  "ar": "الدُّبّ على الطّاوِلة."
+ },
+ "where.at.teddy.under.table": {
+  "en": "The teddy bear is under the table.",
+  "uk": "Ведмедик під столом.",
+  "arz": "الدَّبْدوب تَحْت التَّرابيزة.",
+  "ar": "الدُّبّ تَحْت الطّاوِلة."
+ },
+ "where.at.teddy.behind.table": {
+  "en": "The teddy bear is behind the table.",
+  "uk": "Ведмедик за столом.",
+  "arz": "الدَّبْدوب وَرا التَّرابيزة.",
+  "ar": "الدُّبّ خَلْف الطّاوِلة."
+ },
+ "where.at.teddy.front.table": {
+  "en": "The teddy bear is in front of the table.",
+  "uk": "Ведмедик перед столом.",
+  "arz": "الدَّبْدوب قُدّام التَّرابيزة.",
+  "ar": "الدُّبّ أَمام الطّاوِلة."
+ },
+ "where.at.teddy.next.table": {
+  "en": "The teddy bear is next to the table.",
+  "uk": "Ведмедик біля столу.",
+  "arz": "الدَّبْدوب جَنْب التَّرابيزة.",
+  "ar": "الدُّبّ بِجانِب الطّاوِلة."
+ },
+ "where.at.teddy.in.box": {
+  "en": "The teddy bear is in the box.",
+  "uk": "Ведмедик у коробці.",
+  "arz": "الدَّبْدوب جُوّه الكَرْتونة.",
+  "ar": "الدُّبّ في الصُّنْدوق."
+ },
+ "where.at.teddy.behind.box": {
+  "en": "The teddy bear is behind the box.",
+  "uk": "Ведмедик за коробкою.",
+  "arz": "الدَّبْدوب وَرا الكَرْتونة.",
+  "ar": "الدُّبّ خَلْف الصُّنْدوق."
+ },
+ "where.at.teddy.front.box": {
+  "en": "The teddy bear is in front of the box.",
+  "uk": "Ведмедик перед коробкою.",
+  "arz": "الدَّبْدوب قُدّام الكَرْتونة.",
+  "ar": "الدُّبّ أَمام الصُّنْدوق."
+ },
+ "where.at.teddy.next.box": {
+  "en": "The teddy bear is next to the box.",
+  "uk": "Ведмедик біля коробки.",
+  "arz": "الدَّبْدوب جَنْب الكَرْتونة.",
+  "ar": "الدُّبّ بِجانِب الصُّنْدوق."
+ },
+ "where.at.teddy.on.chair": {
+  "en": "The teddy bear is on the chair.",
+  "uk": "Ведмедик на стільці.",
+  "arz": "الدَّبْدوب على الكُرْسي.",
+  "ar": "الدُّبّ على الكُرْسي."
+ },
+ "where.at.teddy.under.chair": {
+  "en": "The teddy bear is under the chair.",
+  "uk": "Ведмедик під стільцем.",
+  "arz": "الدَّبْدوب تَحْت الكُرْسي.",
+  "ar": "الدُّبّ تَحْت الكُرْسي."
+ },
+ "where.at.teddy.behind.chair": {
+  "en": "The teddy bear is behind the chair.",
+  "uk": "Ведмедик за стільцем.",
+  "arz": "الدَّبْدوب وَرا الكُرْسي.",
+  "ar": "الدُّبّ خَلْف الكُرْسي."
+ },
+ "where.at.teddy.front.chair": {
+  "en": "The teddy bear is in front of the chair.",
+  "uk": "Ведмедик перед стільцем.",
+  "arz": "الدَّبْدوب قُدّام الكُرْسي.",
+  "ar": "الدُّبّ أَمام الكُرْسي."
+ },
+ "where.at.teddy.next.chair": {
+  "en": "The teddy bear is next to the chair.",
+  "uk": "Ведмедик біля стільця.",
+  "arz": "الدَّبْدوب جَنْب الكُرْسي.",
+  "ar": "الدُّبّ بِجانِب الكُرْسي."
+ },
+ "where.at.teddy.on.bed": {
+  "en": "The teddy bear is on the bed.",
+  "uk": "Ведмедик на ліжку.",
+  "arz": "الدَّبْدوب على السِّرير.",
+  "ar": "الدُّبّ على السَّرير."
+ },
+ "where.at.teddy.under.bed": {
+  "en": "The teddy bear is under the bed.",
+  "uk": "Ведмедик під ліжком.",
+  "arz": "الدَّبْدوب تَحْت السِّرير.",
+  "ar": "الدُّبّ تَحْت السَّرير."
+ },
+ "where.at.teddy.next.bed": {
+  "en": "The teddy bear is next to the bed.",
+  "uk": "Ведмедик біля ліжка.",
+  "arz": "الدَّبْدوب جَنْب السِّرير.",
+  "ar": "الدُّبّ بِجانِب السَّرير."
+ },
+ "where.at.teddy.in.bag": {
+  "en": "The teddy bear is in the bag.",
+  "uk": "Ведмедик у рюкзаку.",
+  "arz": "الدَّبْدوب جُوّه الشَّنْطة.",
+  "ar": "الدُّبّ في الحَقيبة."
+ },
+ "where.at.teddy.behind.bag": {
+  "en": "The teddy bear is behind the bag.",
+  "uk": "Ведмедик за рюкзаком.",
+  "arz": "الدَّبْدوب وَرا الشَّنْطة.",
+  "ar": "الدُّبّ خَلْف الحَقيبة."
+ },
+ "where.at.teddy.front.bag": {
+  "en": "The teddy bear is in front of the bag.",
+  "uk": "Ведмедик перед рюкзаком.",
+  "arz": "الدَّبْدوب قُدّام الشَّنْطة.",
+  "ar": "الدُّبّ أَمام الحَقيبة."
+ },
+ "where.at.teddy.next.bag": {
+  "en": "The teddy bear is next to the bag.",
+  "uk": "Ведмедик біля рюкзака.",
+  "arz": "الدَّبْدوب جَنْب الشَّنْطة.",
+  "ar": "الدُّبّ بِجانِب الحَقيبة."
+ },
+ "where.at.apple.on.table": {
+  "en": "The apple is on the table.",
+  "uk": "Яблуко на столі.",
+  "arz": "التُّفّاحة على التَّرابيزة.",
+  "ar": "التُّفّاحة على الطّاوِلة."
+ },
+ "where.at.apple.under.table": {
+  "en": "The apple is under the table.",
+  "uk": "Яблуко під столом.",
+  "arz": "التُّفّاحة تَحْت التَّرابيزة.",
+  "ar": "التُّفّاحة تَحْت الطّاوِلة."
+ },
+ "where.at.apple.behind.table": {
+  "en": "The apple is behind the table.",
+  "uk": "Яблуко за столом.",
+  "arz": "التُّفّاحة وَرا التَّرابيزة.",
+  "ar": "التُّفّاحة خَلْف الطّاوِلة."
+ },
+ "where.at.apple.front.table": {
+  "en": "The apple is in front of the table.",
+  "uk": "Яблуко перед столом.",
+  "arz": "التُّفّاحة قُدّام التَّرابيزة.",
+  "ar": "التُّفّاحة أَمام الطّاوِلة."
+ },
+ "where.at.apple.next.table": {
+  "en": "The apple is next to the table.",
+  "uk": "Яблуко біля столу.",
+  "arz": "التُّفّاحة جَنْب التَّرابيزة.",
+  "ar": "التُّفّاحة بِجانِب الطّاوِلة."
+ },
+ "where.at.apple.in.box": {
+  "en": "The apple is in the box.",
+  "uk": "Яблуко у коробці.",
+  "arz": "التُّفّاحة جُوّه الكَرْتونة.",
+  "ar": "التُّفّاحة في الصُّنْدوق."
+ },
+ "where.at.apple.behind.box": {
+  "en": "The apple is behind the box.",
+  "uk": "Яблуко за коробкою.",
+  "arz": "التُّفّاحة وَرا الكَرْتونة.",
+  "ar": "التُّفّاحة خَلْف الصُّنْدوق."
+ },
+ "where.at.apple.front.box": {
+  "en": "The apple is in front of the box.",
+  "uk": "Яблуко перед коробкою.",
+  "arz": "التُّفّاحة قُدّام الكَرْتونة.",
+  "ar": "التُّفّاحة أَمام الصُّنْدوق."
+ },
+ "where.at.apple.next.box": {
+  "en": "The apple is next to the box.",
+  "uk": "Яблуко біля коробки.",
+  "arz": "التُّفّاحة جَنْب الكَرْتونة.",
+  "ar": "التُّفّاحة بِجانِب الصُّنْدوق."
+ },
+ "where.at.apple.on.chair": {
+  "en": "The apple is on the chair.",
+  "uk": "Яблуко на стільці.",
+  "arz": "التُّفّاحة على الكُرْسي.",
+  "ar": "التُّفّاحة على الكُرْسي."
+ },
+ "where.at.apple.under.chair": {
+  "en": "The apple is under the chair.",
+  "uk": "Яблуко під стільцем.",
+  "arz": "التُّفّاحة تَحْت الكُرْسي.",
+  "ar": "التُّفّاحة تَحْت الكُرْسي."
+ },
+ "where.at.apple.behind.chair": {
+  "en": "The apple is behind the chair.",
+  "uk": "Яблуко за стільцем.",
+  "arz": "التُّفّاحة وَرا الكُرْسي.",
+  "ar": "التُّفّاحة خَلْف الكُرْسي."
+ },
+ "where.at.apple.front.chair": {
+  "en": "The apple is in front of the chair.",
+  "uk": "Яблуко перед стільцем.",
+  "arz": "التُّفّاحة قُدّام الكُرْسي.",
+  "ar": "التُّفّاحة أَمام الكُرْسي."
+ },
+ "where.at.apple.next.chair": {
+  "en": "The apple is next to the chair.",
+  "uk": "Яблуко біля стільця.",
+  "arz": "التُّفّاحة جَنْب الكُرْسي.",
+  "ar": "التُّفّاحة بِجانِب الكُرْسي."
+ },
+ "where.at.apple.on.bed": {
+  "en": "The apple is on the bed.",
+  "uk": "Яблуко на ліжку.",
+  "arz": "التُّفّاحة على السِّرير.",
+  "ar": "التُّفّاحة على السَّرير."
+ },
+ "where.at.apple.under.bed": {
+  "en": "The apple is under the bed.",
+  "uk": "Яблуко під ліжком.",
+  "arz": "التُّفّاحة تَحْت السِّرير.",
+  "ar": "التُّفّاحة تَحْت السَّرير."
+ },
+ "where.at.apple.next.bed": {
+  "en": "The apple is next to the bed.",
+  "uk": "Яблуко біля ліжка.",
+  "arz": "التُّفّاحة جَنْب السِّرير.",
+  "ar": "التُّفّاحة بِجانِب السَّرير."
+ },
+ "where.at.apple.in.bag": {
+  "en": "The apple is in the bag.",
+  "uk": "Яблуко у рюкзаку.",
+  "arz": "التُّفّاحة جُوّه الشَّنْطة.",
+  "ar": "التُّفّاحة في الحَقيبة."
+ },
+ "where.at.apple.behind.bag": {
+  "en": "The apple is behind the bag.",
+  "uk": "Яблуко за рюкзаком.",
+  "arz": "التُّفّاحة وَرا الشَّنْطة.",
+  "ar": "التُّفّاحة خَلْف الحَقيبة."
+ },
+ "where.at.apple.front.bag": {
+  "en": "The apple is in front of the bag.",
+  "uk": "Яблуко перед рюкзаком.",
+  "arz": "التُّفّاحة قُدّام الشَّنْطة.",
+  "ar": "التُّفّاحة أَمام الحَقيبة."
+ },
+ "where.at.apple.next.bag": {
+  "en": "The apple is next to the bag.",
+  "uk": "Яблуко біля рюкзака.",
+  "arz": "التُّفّاحة جَنْب الشَّنْطة.",
+  "ar": "التُّفّاحة بِجانِب الحَقيبة."
+ },
+ "where.at.book.on.table": {
+  "en": "The book is on the table.",
+  "uk": "Книжка на столі.",
+  "arz": "الكِتاب على التَّرابيزة.",
+  "ar": "الكِتاب على الطّاوِلة."
+ },
+ "where.at.book.under.table": {
+  "en": "The book is under the table.",
+  "uk": "Книжка під столом.",
+  "arz": "الكِتاب تَحْت التَّرابيزة.",
+  "ar": "الكِتاب تَحْت الطّاوِلة."
+ },
+ "where.at.book.behind.table": {
+  "en": "The book is behind the table.",
+  "uk": "Книжка за столом.",
+  "arz": "الكِتاب وَرا التَّرابيزة.",
+  "ar": "الكِتاب خَلْف الطّاوِلة."
+ },
+ "where.at.book.front.table": {
+  "en": "The book is in front of the table.",
+  "uk": "Книжка перед столом.",
+  "arz": "الكِتاب قُدّام التَّرابيزة.",
+  "ar": "الكِتاب أَمام الطّاوِلة."
+ },
+ "where.at.book.next.table": {
+  "en": "The book is next to the table.",
+  "uk": "Книжка біля столу.",
+  "arz": "الكِتاب جَنْب التَّرابيزة.",
+  "ar": "الكِتاب بِجانِب الطّاوِلة."
+ },
+ "where.at.book.in.box": {
+  "en": "The book is in the box.",
+  "uk": "Книжка у коробці.",
+  "arz": "الكِتاب جُوّه الكَرْتونة.",
+  "ar": "الكِتاب في الصُّنْدوق."
+ },
+ "where.at.book.behind.box": {
+  "en": "The book is behind the box.",
+  "uk": "Книжка за коробкою.",
+  "arz": "الكِتاب وَرا الكَرْتونة.",
+  "ar": "الكِتاب خَلْف الصُّنْدوق."
+ },
+ "where.at.book.front.box": {
+  "en": "The book is in front of the box.",
+  "uk": "Книжка перед коробкою.",
+  "arz": "الكِتاب قُدّام الكَرْتونة.",
+  "ar": "الكِتاب أَمام الصُّنْدوق."
+ },
+ "where.at.book.next.box": {
+  "en": "The book is next to the box.",
+  "uk": "Книжка біля коробки.",
+  "arz": "الكِتاب جَنْب الكَرْتونة.",
+  "ar": "الكِتاب بِجانِب الصُّنْدوق."
+ },
+ "where.at.book.on.chair": {
+  "en": "The book is on the chair.",
+  "uk": "Книжка на стільці.",
+  "arz": "الكِتاب على الكُرْسي.",
+  "ar": "الكِتاب على الكُرْسي."
+ },
+ "where.at.book.under.chair": {
+  "en": "The book is under the chair.",
+  "uk": "Книжка під стільцем.",
+  "arz": "الكِتاب تَحْت الكُرْسي.",
+  "ar": "الكِتاب تَحْت الكُرْسي."
+ },
+ "where.at.book.behind.chair": {
+  "en": "The book is behind the chair.",
+  "uk": "Книжка за стільцем.",
+  "arz": "الكِتاب وَرا الكُرْسي.",
+  "ar": "الكِتاب خَلْف الكُرْسي."
+ },
+ "where.at.book.front.chair": {
+  "en": "The book is in front of the chair.",
+  "uk": "Книжка перед стільцем.",
+  "arz": "الكِتاب قُدّام الكُرْسي.",
+  "ar": "الكِتاب أَمام الكُرْسي."
+ },
+ "where.at.book.next.chair": {
+  "en": "The book is next to the chair.",
+  "uk": "Книжка біля стільця.",
+  "arz": "الكِتاب جَنْب الكُرْسي.",
+  "ar": "الكِتاب بِجانِب الكُرْسي."
+ },
+ "where.at.book.on.bed": {
+  "en": "The book is on the bed.",
+  "uk": "Книжка на ліжку.",
+  "arz": "الكِتاب على السِّرير.",
+  "ar": "الكِتاب على السَّرير."
+ },
+ "where.at.book.under.bed": {
+  "en": "The book is under the bed.",
+  "uk": "Книжка під ліжком.",
+  "arz": "الكِتاب تَحْت السِّرير.",
+  "ar": "الكِتاب تَحْت السَّرير."
+ },
+ "where.at.book.next.bed": {
+  "en": "The book is next to the bed.",
+  "uk": "Книжка біля ліжка.",
+  "arz": "الكِتاب جَنْب السِّرير.",
+  "ar": "الكِتاب بِجانِب السَّرير."
+ },
+ "where.at.book.in.bag": {
+  "en": "The book is in the bag.",
+  "uk": "Книжка у рюкзаку.",
+  "arz": "الكِتاب جُوّه الشَّنْطة.",
+  "ar": "الكِتاب في الحَقيبة."
+ },
+ "where.at.book.behind.bag": {
+  "en": "The book is behind the bag.",
+  "uk": "Книжка за рюкзаком.",
+  "arz": "الكِتاب وَرا الشَّنْطة.",
+  "ar": "الكِتاب خَلْف الحَقيبة."
+ },
+ "where.at.book.front.bag": {
+  "en": "The book is in front of the bag.",
+  "uk": "Книжка перед рюкзаком.",
+  "arz": "الكِتاب قُدّام الشَّنْطة.",
+  "ar": "الكِتاب أَمام الحَقيبة."
+ },
+ "where.at.book.next.bag": {
+  "en": "The book is next to the bag.",
+  "uk": "Книжка біля рюкзака.",
+  "arz": "الكِتاب جَنْب الشَّنْطة.",
+  "ar": "الكِتاب بِجانِب الحَقيبة."
+ },
+ "where.put.cat.on.table": {
+  "en": "Put the cat on the table.",
+  "uk": "Поклади кота на стіл.",
+  "arz": "حُطّ القُطّة على التَّرابيزة.",
+  "ar": "ضَعِ القِطّة على الطّاوِلة."
+ },
+ "where.put.cat.under.table": {
+  "en": "Put the cat under the table.",
+  "uk": "Поклади кота під стіл.",
+  "arz": "حُطّ القُطّة تَحْت التَّرابيزة.",
+  "ar": "ضَعِ القِطّة تَحْت الطّاوِلة."
+ },
+ "where.put.cat.behind.table": {
+  "en": "Put the cat behind the table.",
+  "uk": "Поклади кота за стіл.",
+  "arz": "حُطّ القُطّة وَرا التَّرابيزة.",
+  "ar": "ضَعِ القِطّة خَلْف الطّاوِلة."
+ },
+ "where.put.cat.front.table": {
+  "en": "Put the cat in front of the table.",
+  "uk": "Поклади кота перед столом.",
+  "arz": "حُطّ القُطّة قُدّام التَّرابيزة.",
+  "ar": "ضَعِ القِطّة أَمام الطّاوِلة."
+ },
+ "where.put.cat.next.table": {
+  "en": "Put the cat next to the table.",
+  "uk": "Поклади кота біля столу.",
+  "arz": "حُطّ القُطّة جَنْب التَّرابيزة.",
+  "ar": "ضَعِ القِطّة بِجانِب الطّاوِلة."
+ },
+ "where.put.cat.in.box": {
+  "en": "Put the cat in the box.",
+  "uk": "Поклади кота у коробку.",
+  "arz": "حُطّ القُطّة جُوّه الكَرْتونة.",
+  "ar": "ضَعِ القِطّة في الصُّنْدوق."
+ },
+ "where.put.cat.behind.box": {
+  "en": "Put the cat behind the box.",
+  "uk": "Поклади кота за коробку.",
+  "arz": "حُطّ القُطّة وَرا الكَرْتونة.",
+  "ar": "ضَعِ القِطّة خَلْف الصُّنْدوق."
+ },
+ "where.put.cat.front.box": {
+  "en": "Put the cat in front of the box.",
+  "uk": "Поклади кота перед коробкою.",
+  "arz": "حُطّ القُطّة قُدّام الكَرْتونة.",
+  "ar": "ضَعِ القِطّة أَمام الصُّنْدوق."
+ },
+ "where.put.cat.next.box": {
+  "en": "Put the cat next to the box.",
+  "uk": "Поклади кота біля коробки.",
+  "arz": "حُطّ القُطّة جَنْب الكَرْتونة.",
+  "ar": "ضَعِ القِطّة بِجانِب الصُّنْدوق."
+ },
+ "where.put.cat.on.chair": {
+  "en": "Put the cat on the chair.",
+  "uk": "Поклади кота на стілець.",
+  "arz": "حُطّ القُطّة على الكُرْسي.",
+  "ar": "ضَعِ القِطّة على الكُرْسي."
+ },
+ "where.put.cat.under.chair": {
+  "en": "Put the cat under the chair.",
+  "uk": "Поклади кота під стілець.",
+  "arz": "حُطّ القُطّة تَحْت الكُرْسي.",
+  "ar": "ضَعِ القِطّة تَحْت الكُرْسي."
+ },
+ "where.put.cat.behind.chair": {
+  "en": "Put the cat behind the chair.",
+  "uk": "Поклади кота за стілець.",
+  "arz": "حُطّ القُطّة وَرا الكُرْسي.",
+  "ar": "ضَعِ القِطّة خَلْف الكُرْسي."
+ },
+ "where.put.cat.front.chair": {
+  "en": "Put the cat in front of the chair.",
+  "uk": "Поклади кота перед стільцем.",
+  "arz": "حُطّ القُطّة قُدّام الكُرْسي.",
+  "ar": "ضَعِ القِطّة أَمام الكُرْسي."
+ },
+ "where.put.cat.next.chair": {
+  "en": "Put the cat next to the chair.",
+  "uk": "Поклади кота біля стільця.",
+  "arz": "حُطّ القُطّة جَنْب الكُرْسي.",
+  "ar": "ضَعِ القِطّة بِجانِب الكُرْسي."
+ },
+ "where.put.cat.on.bed": {
+  "en": "Put the cat on the bed.",
+  "uk": "Поклади кота на ліжко.",
+  "arz": "حُطّ القُطّة على السِّرير.",
+  "ar": "ضَعِ القِطّة على السَّرير."
+ },
+ "where.put.cat.under.bed": {
+  "en": "Put the cat under the bed.",
+  "uk": "Поклади кота під ліжко.",
+  "arz": "حُطّ القُطّة تَحْت السِّرير.",
+  "ar": "ضَعِ القِطّة تَحْت السَّرير."
+ },
+ "where.put.cat.next.bed": {
+  "en": "Put the cat next to the bed.",
+  "uk": "Поклади кота біля ліжка.",
+  "arz": "حُطّ القُطّة جَنْب السِّرير.",
+  "ar": "ضَعِ القِطّة بِجانِب السَّرير."
+ },
+ "where.put.cat.in.bag": {
+  "en": "Put the cat in the bag.",
+  "uk": "Поклади кота у рюкзак.",
+  "arz": "حُطّ القُطّة جُوّه الشَّنْطة.",
+  "ar": "ضَعِ القِطّة في الحَقيبة."
+ },
+ "where.put.cat.behind.bag": {
+  "en": "Put the cat behind the bag.",
+  "uk": "Поклади кота за рюкзак.",
+  "arz": "حُطّ القُطّة وَرا الشَّنْطة.",
+  "ar": "ضَعِ القِطّة خَلْف الحَقيبة."
+ },
+ "where.put.cat.front.bag": {
+  "en": "Put the cat in front of the bag.",
+  "uk": "Поклади кота перед рюкзаком.",
+  "arz": "حُطّ القُطّة قُدّام الشَّنْطة.",
+  "ar": "ضَعِ القِطّة أَمام الحَقيبة."
+ },
+ "where.put.cat.next.bag": {
+  "en": "Put the cat next to the bag.",
+  "uk": "Поклади кота біля рюкзака.",
+  "arz": "حُطّ القُطّة جَنْب الشَّنْطة.",
+  "ar": "ضَعِ القِطّة بِجانِب الحَقيبة."
+ },
+ "where.put.dog.on.table": {
+  "en": "Put the dog on the table.",
+  "uk": "Поклади собаку на стіл.",
+  "arz": "حُطّ الكَلْب على التَّرابيزة.",
+  "ar": "ضَعِ الكَلْب على الطّاوِلة."
+ },
+ "where.put.dog.under.table": {
+  "en": "Put the dog under the table.",
+  "uk": "Поклади собаку під стіл.",
+  "arz": "حُطّ الكَلْب تَحْت التَّرابيزة.",
+  "ar": "ضَعِ الكَلْب تَحْت الطّاوِلة."
+ },
+ "where.put.dog.behind.table": {
+  "en": "Put the dog behind the table.",
+  "uk": "Поклади собаку за стіл.",
+  "arz": "حُطّ الكَلْب وَرا التَّرابيزة.",
+  "ar": "ضَعِ الكَلْب خَلْف الطّاوِلة."
+ },
+ "where.put.dog.front.table": {
+  "en": "Put the dog in front of the table.",
+  "uk": "Поклади собаку перед столом.",
+  "arz": "حُطّ الكَلْب قُدّام التَّرابيزة.",
+  "ar": "ضَعِ الكَلْب أَمام الطّاوِلة."
+ },
+ "where.put.dog.next.table": {
+  "en": "Put the dog next to the table.",
+  "uk": "Поклади собаку біля столу.",
+  "arz": "حُطّ الكَلْب جَنْب التَّرابيزة.",
+  "ar": "ضَعِ الكَلْب بِجانِب الطّاوِلة."
+ },
+ "where.put.dog.in.box": {
+  "en": "Put the dog in the box.",
+  "uk": "Поклади собаку у коробку.",
+  "arz": "حُطّ الكَلْب جُوّه الكَرْتونة.",
+  "ar": "ضَعِ الكَلْب في الصُّنْدوق."
+ },
+ "where.put.dog.behind.box": {
+  "en": "Put the dog behind the box.",
+  "uk": "Поклади собаку за коробку.",
+  "arz": "حُطّ الكَلْب وَرا الكَرْتونة.",
+  "ar": "ضَعِ الكَلْب خَلْف الصُّنْدوق."
+ },
+ "where.put.dog.front.box": {
+  "en": "Put the dog in front of the box.",
+  "uk": "Поклади собаку перед коробкою.",
+  "arz": "حُطّ الكَلْب قُدّام الكَرْتونة.",
+  "ar": "ضَعِ الكَلْب أَمام الصُّنْدوق."
+ },
+ "where.put.dog.next.box": {
+  "en": "Put the dog next to the box.",
+  "uk": "Поклади собаку біля коробки.",
+  "arz": "حُطّ الكَلْب جَنْب الكَرْتونة.",
+  "ar": "ضَعِ الكَلْب بِجانِب الصُّنْدوق."
+ },
+ "where.put.dog.on.chair": {
+  "en": "Put the dog on the chair.",
+  "uk": "Поклади собаку на стілець.",
+  "arz": "حُطّ الكَلْب على الكُرْسي.",
+  "ar": "ضَعِ الكَلْب على الكُرْسي."
+ },
+ "where.put.dog.under.chair": {
+  "en": "Put the dog under the chair.",
+  "uk": "Поклади собаку під стілець.",
+  "arz": "حُطّ الكَلْب تَحْت الكُرْسي.",
+  "ar": "ضَعِ الكَلْب تَحْت الكُرْسي."
+ },
+ "where.put.dog.behind.chair": {
+  "en": "Put the dog behind the chair.",
+  "uk": "Поклади собаку за стілець.",
+  "arz": "حُطّ الكَلْب وَرا الكُرْسي.",
+  "ar": "ضَعِ الكَلْب خَلْف الكُرْسي."
+ },
+ "where.put.dog.front.chair": {
+  "en": "Put the dog in front of the chair.",
+  "uk": "Поклади собаку перед стільцем.",
+  "arz": "حُطّ الكَلْب قُدّام الكُرْسي.",
+  "ar": "ضَعِ الكَلْب أَمام الكُرْسي."
+ },
+ "where.put.dog.next.chair": {
+  "en": "Put the dog next to the chair.",
+  "uk": "Поклади собаку біля стільця.",
+  "arz": "حُطّ الكَلْب جَنْب الكُرْسي.",
+  "ar": "ضَعِ الكَلْب بِجانِب الكُرْسي."
+ },
+ "where.put.dog.on.bed": {
+  "en": "Put the dog on the bed.",
+  "uk": "Поклади собаку на ліжко.",
+  "arz": "حُطّ الكَلْب على السِّرير.",
+  "ar": "ضَعِ الكَلْب على السَّرير."
+ },
+ "where.put.dog.under.bed": {
+  "en": "Put the dog under the bed.",
+  "uk": "Поклади собаку під ліжко.",
+  "arz": "حُطّ الكَلْب تَحْت السِّرير.",
+  "ar": "ضَعِ الكَلْب تَحْت السَّرير."
+ },
+ "where.put.dog.next.bed": {
+  "en": "Put the dog next to the bed.",
+  "uk": "Поклади собаку біля ліжка.",
+  "arz": "حُطّ الكَلْب جَنْب السِّرير.",
+  "ar": "ضَعِ الكَلْب بِجانِب السَّرير."
+ },
+ "where.put.dog.in.bag": {
+  "en": "Put the dog in the bag.",
+  "uk": "Поклади собаку у рюкзак.",
+  "arz": "حُطّ الكَلْب جُوّه الشَّنْطة.",
+  "ar": "ضَعِ الكَلْب في الحَقيبة."
+ },
+ "where.put.dog.behind.bag": {
+  "en": "Put the dog behind the bag.",
+  "uk": "Поклади собаку за рюкзак.",
+  "arz": "حُطّ الكَلْب وَرا الشَّنْطة.",
+  "ar": "ضَعِ الكَلْب خَلْف الحَقيبة."
+ },
+ "where.put.dog.front.bag": {
+  "en": "Put the dog in front of the bag.",
+  "uk": "Поклади собаку перед рюкзаком.",
+  "arz": "حُطّ الكَلْب قُدّام الشَّنْطة.",
+  "ar": "ضَعِ الكَلْب أَمام الحَقيبة."
+ },
+ "where.put.dog.next.bag": {
+  "en": "Put the dog next to the bag.",
+  "uk": "Поклади собаку біля рюкзака.",
+  "arz": "حُطّ الكَلْب جَنْب الشَّنْطة.",
+  "ar": "ضَعِ الكَلْب بِجانِب الحَقيبة."
+ },
+ "where.put.ball.on.table": {
+  "en": "Put the ball on the table.",
+  "uk": "Поклади м'яч на стіл.",
+  "arz": "حُطّ الكورة على التَّرابيزة.",
+  "ar": "ضَعِ الكُرة على الطّاوِلة."
+ },
+ "where.put.ball.under.table": {
+  "en": "Put the ball under the table.",
+  "uk": "Поклади м'яч під стіл.",
+  "arz": "حُطّ الكورة تَحْت التَّرابيزة.",
+  "ar": "ضَعِ الكُرة تَحْت الطّاوِلة."
+ },
+ "where.put.ball.behind.table": {
+  "en": "Put the ball behind the table.",
+  "uk": "Поклади м'яч за стіл.",
+  "arz": "حُطّ الكورة وَرا التَّرابيزة.",
+  "ar": "ضَعِ الكُرة خَلْف الطّاوِلة."
+ },
+ "where.put.ball.front.table": {
+  "en": "Put the ball in front of the table.",
+  "uk": "Поклади м'яч перед столом.",
+  "arz": "حُطّ الكورة قُدّام التَّرابيزة.",
+  "ar": "ضَعِ الكُرة أَمام الطّاوِلة."
+ },
+ "where.put.ball.next.table": {
+  "en": "Put the ball next to the table.",
+  "uk": "Поклади м'яч біля столу.",
+  "arz": "حُطّ الكورة جَنْب التَّرابيزة.",
+  "ar": "ضَعِ الكُرة بِجانِب الطّاوِلة."
+ },
+ "where.put.ball.in.box": {
+  "en": "Put the ball in the box.",
+  "uk": "Поклади м'яч у коробку.",
+  "arz": "حُطّ الكورة جُوّه الكَرْتونة.",
+  "ar": "ضَعِ الكُرة في الصُّنْدوق."
+ },
+ "where.put.ball.behind.box": {
+  "en": "Put the ball behind the box.",
+  "uk": "Поклади м'яч за коробку.",
+  "arz": "حُطّ الكورة وَرا الكَرْتونة.",
+  "ar": "ضَعِ الكُرة خَلْف الصُّنْدوق."
+ },
+ "where.put.ball.front.box": {
+  "en": "Put the ball in front of the box.",
+  "uk": "Поклади м'яч перед коробкою.",
+  "arz": "حُطّ الكورة قُدّام الكَرْتونة.",
+  "ar": "ضَعِ الكُرة أَمام الصُّنْدوق."
+ },
+ "where.put.ball.next.box": {
+  "en": "Put the ball next to the box.",
+  "uk": "Поклади м'яч біля коробки.",
+  "arz": "حُطّ الكورة جَنْب الكَرْتونة.",
+  "ar": "ضَعِ الكُرة بِجانِب الصُّنْدوق."
+ },
+ "where.put.ball.on.chair": {
+  "en": "Put the ball on the chair.",
+  "uk": "Поклади м'яч на стілець.",
+  "arz": "حُطّ الكورة على الكُرْسي.",
+  "ar": "ضَعِ الكُرة على الكُرْسي."
+ },
+ "where.put.ball.under.chair": {
+  "en": "Put the ball under the chair.",
+  "uk": "Поклади м'яч під стілець.",
+  "arz": "حُطّ الكورة تَحْت الكُرْسي.",
+  "ar": "ضَعِ الكُرة تَحْت الكُرْسي."
+ },
+ "where.put.ball.behind.chair": {
+  "en": "Put the ball behind the chair.",
+  "uk": "Поклади м'яч за стілець.",
+  "arz": "حُطّ الكورة وَرا الكُرْسي.",
+  "ar": "ضَعِ الكُرة خَلْف الكُرْسي."
+ },
+ "where.put.ball.front.chair": {
+  "en": "Put the ball in front of the chair.",
+  "uk": "Поклади м'яч перед стільцем.",
+  "arz": "حُطّ الكورة قُدّام الكُرْسي.",
+  "ar": "ضَعِ الكُرة أَمام الكُرْسي."
+ },
+ "where.put.ball.next.chair": {
+  "en": "Put the ball next to the chair.",
+  "uk": "Поклади м'яч біля стільця.",
+  "arz": "حُطّ الكورة جَنْب الكُرْسي.",
+  "ar": "ضَعِ الكُرة بِجانِب الكُرْسي."
+ },
+ "where.put.ball.on.bed": {
+  "en": "Put the ball on the bed.",
+  "uk": "Поклади м'яч на ліжко.",
+  "arz": "حُطّ الكورة على السِّرير.",
+  "ar": "ضَعِ الكُرة على السَّرير."
+ },
+ "where.put.ball.under.bed": {
+  "en": "Put the ball under the bed.",
+  "uk": "Поклади м'яч під ліжко.",
+  "arz": "حُطّ الكورة تَحْت السِّرير.",
+  "ar": "ضَعِ الكُرة تَحْت السَّرير."
+ },
+ "where.put.ball.next.bed": {
+  "en": "Put the ball next to the bed.",
+  "uk": "Поклади м'яч біля ліжка.",
+  "arz": "حُطّ الكورة جَنْب السِّرير.",
+  "ar": "ضَعِ الكُرة بِجانِب السَّرير."
+ },
+ "where.put.ball.in.bag": {
+  "en": "Put the ball in the bag.",
+  "uk": "Поклади м'яч у рюкзак.",
+  "arz": "حُطّ الكورة جُوّه الشَّنْطة.",
+  "ar": "ضَعِ الكُرة في الحَقيبة."
+ },
+ "where.put.ball.behind.bag": {
+  "en": "Put the ball behind the bag.",
+  "uk": "Поклади м'яч за рюкзак.",
+  "arz": "حُطّ الكورة وَرا الشَّنْطة.",
+  "ar": "ضَعِ الكُرة خَلْف الحَقيبة."
+ },
+ "where.put.ball.front.bag": {
+  "en": "Put the ball in front of the bag.",
+  "uk": "Поклади м'яч перед рюкзаком.",
+  "arz": "حُطّ الكورة قُدّام الشَّنْطة.",
+  "ar": "ضَعِ الكُرة أَمام الحَقيبة."
+ },
+ "where.put.ball.next.bag": {
+  "en": "Put the ball next to the bag.",
+  "uk": "Поклади м'яч біля рюкзака.",
+  "arz": "حُطّ الكورة جَنْب الشَّنْطة.",
+  "ar": "ضَعِ الكُرة بِجانِب الحَقيبة."
+ },
+ "where.put.teddy.on.table": {
+  "en": "Put the teddy bear on the table.",
+  "uk": "Поклади ведмедика на стіл.",
+  "arz": "حُطّ الدَّبْدوب على التَّرابيزة.",
+  "ar": "ضَعِ الدُّبّ على الطّاوِلة."
+ },
+ "where.put.teddy.under.table": {
+  "en": "Put the teddy bear under the table.",
+  "uk": "Поклади ведмедика під стіл.",
+  "arz": "حُطّ الدَّبْدوب تَحْت التَّرابيزة.",
+  "ar": "ضَعِ الدُّبّ تَحْت الطّاوِلة."
+ },
+ "where.put.teddy.behind.table": {
+  "en": "Put the teddy bear behind the table.",
+  "uk": "Поклади ведмедика за стіл.",
+  "arz": "حُطّ الدَّبْدوب وَرا التَّرابيزة.",
+  "ar": "ضَعِ الدُّبّ خَلْف الطّاوِلة."
+ },
+ "where.put.teddy.front.table": {
+  "en": "Put the teddy bear in front of the table.",
+  "uk": "Поклади ведмедика перед столом.",
+  "arz": "حُطّ الدَّبْدوب قُدّام التَّرابيزة.",
+  "ar": "ضَعِ الدُّبّ أَمام الطّاوِلة."
+ },
+ "where.put.teddy.next.table": {
+  "en": "Put the teddy bear next to the table.",
+  "uk": "Поклади ведмедика біля столу.",
+  "arz": "حُطّ الدَّبْدوب جَنْب التَّرابيزة.",
+  "ar": "ضَعِ الدُّبّ بِجانِب الطّاوِلة."
+ },
+ "where.put.teddy.in.box": {
+  "en": "Put the teddy bear in the box.",
+  "uk": "Поклади ведмедика у коробку.",
+  "arz": "حُطّ الدَّبْدوب جُوّه الكَرْتونة.",
+  "ar": "ضَعِ الدُّبّ في الصُّنْدوق."
+ },
+ "where.put.teddy.behind.box": {
+  "en": "Put the teddy bear behind the box.",
+  "uk": "Поклади ведмедика за коробку.",
+  "arz": "حُطّ الدَّبْدوب وَرا الكَرْتونة.",
+  "ar": "ضَعِ الدُّبّ خَلْف الصُّنْدوق."
+ },
+ "where.put.teddy.front.box": {
+  "en": "Put the teddy bear in front of the box.",
+  "uk": "Поклади ведмедика перед коробкою.",
+  "arz": "حُطّ الدَّبْدوب قُدّام الكَرْتونة.",
+  "ar": "ضَعِ الدُّبّ أَمام الصُّنْدوق."
+ },
+ "where.put.teddy.next.box": {
+  "en": "Put the teddy bear next to the box.",
+  "uk": "Поклади ведмедика біля коробки.",
+  "arz": "حُطّ الدَّبْدوب جَنْب الكَرْتونة.",
+  "ar": "ضَعِ الدُّبّ بِجانِب الصُّنْدوق."
+ },
+ "where.put.teddy.on.chair": {
+  "en": "Put the teddy bear on the chair.",
+  "uk": "Поклади ведмедика на стілець.",
+  "arz": "حُطّ الدَّبْدوب على الكُرْسي.",
+  "ar": "ضَعِ الدُّبّ على الكُرْسي."
+ },
+ "where.put.teddy.under.chair": {
+  "en": "Put the teddy bear under the chair.",
+  "uk": "Поклади ведмедика під стілець.",
+  "arz": "حُطّ الدَّبْدوب تَحْت الكُرْسي.",
+  "ar": "ضَعِ الدُّبّ تَحْت الكُرْسي."
+ },
+ "where.put.teddy.behind.chair": {
+  "en": "Put the teddy bear behind the chair.",
+  "uk": "Поклади ведмедика за стілець.",
+  "arz": "حُطّ الدَّبْدوب وَرا الكُرْسي.",
+  "ar": "ضَعِ الدُّبّ خَلْف الكُرْسي."
+ },
+ "where.put.teddy.front.chair": {
+  "en": "Put the teddy bear in front of the chair.",
+  "uk": "Поклади ведмедика перед стільцем.",
+  "arz": "حُطّ الدَّبْدوب قُدّام الكُرْسي.",
+  "ar": "ضَعِ الدُّبّ أَمام الكُرْسي."
+ },
+ "where.put.teddy.next.chair": {
+  "en": "Put the teddy bear next to the chair.",
+  "uk": "Поклади ведмедика біля стільця.",
+  "arz": "حُطّ الدَّبْدوب جَنْب الكُرْسي.",
+  "ar": "ضَعِ الدُّبّ بِجانِب الكُرْسي."
+ },
+ "where.put.teddy.on.bed": {
+  "en": "Put the teddy bear on the bed.",
+  "uk": "Поклади ведмедика на ліжко.",
+  "arz": "حُطّ الدَّبْدوب على السِّرير.",
+  "ar": "ضَعِ الدُّبّ على السَّرير."
+ },
+ "where.put.teddy.under.bed": {
+  "en": "Put the teddy bear under the bed.",
+  "uk": "Поклади ведмедика під ліжко.",
+  "arz": "حُطّ الدَّبْدوب تَحْت السِّرير.",
+  "ar": "ضَعِ الدُّبّ تَحْت السَّرير."
+ },
+ "where.put.teddy.next.bed": {
+  "en": "Put the teddy bear next to the bed.",
+  "uk": "Поклади ведмедика біля ліжка.",
+  "arz": "حُطّ الدَّبْدوب جَنْب السِّرير.",
+  "ar": "ضَعِ الدُّبّ بِجانِب السَّرير."
+ },
+ "where.put.teddy.in.bag": {
+  "en": "Put the teddy bear in the bag.",
+  "uk": "Поклади ведмедика у рюкзак.",
+  "arz": "حُطّ الدَّبْدوب جُوّه الشَّنْطة.",
+  "ar": "ضَعِ الدُّبّ في الحَقيبة."
+ },
+ "where.put.teddy.behind.bag": {
+  "en": "Put the teddy bear behind the bag.",
+  "uk": "Поклади ведмедика за рюкзак.",
+  "arz": "حُطّ الدَّبْدوب وَرا الشَّنْطة.",
+  "ar": "ضَعِ الدُّبّ خَلْف الحَقيبة."
+ },
+ "where.put.teddy.front.bag": {
+  "en": "Put the teddy bear in front of the bag.",
+  "uk": "Поклади ведмедика перед рюкзаком.",
+  "arz": "حُطّ الدَّبْدوب قُدّام الشَّنْطة.",
+  "ar": "ضَعِ الدُّبّ أَمام الحَقيبة."
+ },
+ "where.put.teddy.next.bag": {
+  "en": "Put the teddy bear next to the bag.",
+  "uk": "Поклади ведмедика біля рюкзака.",
+  "arz": "حُطّ الدَّبْدوب جَنْب الشَّنْطة.",
+  "ar": "ضَعِ الدُّبّ بِجانِب الحَقيبة."
+ },
+ "where.put.apple.on.table": {
+  "en": "Put the apple on the table.",
+  "uk": "Поклади яблуко на стіл.",
+  "arz": "حُطّ التُّفّاحة على التَّرابيزة.",
+  "ar": "ضَعِ التُّفّاحة على الطّاوِلة."
+ },
+ "where.put.apple.under.table": {
+  "en": "Put the apple under the table.",
+  "uk": "Поклади яблуко під стіл.",
+  "arz": "حُطّ التُّفّاحة تَحْت التَّرابيزة.",
+  "ar": "ضَعِ التُّفّاحة تَحْت الطّاوِلة."
+ },
+ "where.put.apple.behind.table": {
+  "en": "Put the apple behind the table.",
+  "uk": "Поклади яблуко за стіл.",
+  "arz": "حُطّ التُّفّاحة وَرا التَّرابيزة.",
+  "ar": "ضَعِ التُّفّاحة خَلْف الطّاوِلة."
+ },
+ "where.put.apple.front.table": {
+  "en": "Put the apple in front of the table.",
+  "uk": "Поклади яблуко перед столом.",
+  "arz": "حُطّ التُّفّاحة قُدّام التَّرابيزة.",
+  "ar": "ضَعِ التُّفّاحة أَمام الطّاوِلة."
+ },
+ "where.put.apple.next.table": {
+  "en": "Put the apple next to the table.",
+  "uk": "Поклади яблуко біля столу.",
+  "arz": "حُطّ التُّفّاحة جَنْب التَّرابيزة.",
+  "ar": "ضَعِ التُّفّاحة بِجانِب الطّاوِلة."
+ },
+ "where.put.apple.in.box": {
+  "en": "Put the apple in the box.",
+  "uk": "Поклади яблуко у коробку.",
+  "arz": "حُطّ التُّفّاحة جُوّه الكَرْتونة.",
+  "ar": "ضَعِ التُّفّاحة في الصُّنْدوق."
+ },
+ "where.put.apple.behind.box": {
+  "en": "Put the apple behind the box.",
+  "uk": "Поклади яблуко за коробку.",
+  "arz": "حُطّ التُّفّاحة وَرا الكَرْتونة.",
+  "ar": "ضَعِ التُّفّاحة خَلْف الصُّنْدوق."
+ },
+ "where.put.apple.front.box": {
+  "en": "Put the apple in front of the box.",
+  "uk": "Поклади яблуко перед коробкою.",
+  "arz": "حُطّ التُّفّاحة قُدّام الكَرْتونة.",
+  "ar": "ضَعِ التُّفّاحة أَمام الصُّنْدوق."
+ },
+ "where.put.apple.next.box": {
+  "en": "Put the apple next to the box.",
+  "uk": "Поклади яблуко біля коробки.",
+  "arz": "حُطّ التُّفّاحة جَنْب الكَرْتونة.",
+  "ar": "ضَعِ التُّفّاحة بِجانِب الصُّنْدوق."
+ },
+ "where.put.apple.on.chair": {
+  "en": "Put the apple on the chair.",
+  "uk": "Поклади яблуко на стілець.",
+  "arz": "حُطّ التُّفّاحة على الكُرْسي.",
+  "ar": "ضَعِ التُّفّاحة على الكُرْسي."
+ },
+ "where.put.apple.under.chair": {
+  "en": "Put the apple under the chair.",
+  "uk": "Поклади яблуко під стілець.",
+  "arz": "حُطّ التُّفّاحة تَحْت الكُرْسي.",
+  "ar": "ضَعِ التُّفّاحة تَحْت الكُرْسي."
+ },
+ "where.put.apple.behind.chair": {
+  "en": "Put the apple behind the chair.",
+  "uk": "Поклади яблуко за стілець.",
+  "arz": "حُطّ التُّفّاحة وَرا الكُرْسي.",
+  "ar": "ضَعِ التُّفّاحة خَلْف الكُرْسي."
+ },
+ "where.put.apple.front.chair": {
+  "en": "Put the apple in front of the chair.",
+  "uk": "Поклади яблуко перед стільцем.",
+  "arz": "حُطّ التُّفّاحة قُدّام الكُرْسي.",
+  "ar": "ضَعِ التُّفّاحة أَمام الكُرْسي."
+ },
+ "where.put.apple.next.chair": {
+  "en": "Put the apple next to the chair.",
+  "uk": "Поклади яблуко біля стільця.",
+  "arz": "حُطّ التُّفّاحة جَنْب الكُرْسي.",
+  "ar": "ضَعِ التُّفّاحة بِجانِب الكُرْسي."
+ },
+ "where.put.apple.on.bed": {
+  "en": "Put the apple on the bed.",
+  "uk": "Поклади яблуко на ліжко.",
+  "arz": "حُطّ التُّفّاحة على السِّرير.",
+  "ar": "ضَعِ التُّفّاحة على السَّرير."
+ },
+ "where.put.apple.under.bed": {
+  "en": "Put the apple under the bed.",
+  "uk": "Поклади яблуко під ліжко.",
+  "arz": "حُطّ التُّفّاحة تَحْت السِّرير.",
+  "ar": "ضَعِ التُّفّاحة تَحْت السَّرير."
+ },
+ "where.put.apple.next.bed": {
+  "en": "Put the apple next to the bed.",
+  "uk": "Поклади яблуко біля ліжка.",
+  "arz": "حُطّ التُّفّاحة جَنْب السِّرير.",
+  "ar": "ضَعِ التُّفّاحة بِجانِب السَّرير."
+ },
+ "where.put.apple.in.bag": {
+  "en": "Put the apple in the bag.",
+  "uk": "Поклади яблуко у рюкзак.",
+  "arz": "حُطّ التُّفّاحة جُوّه الشَّنْطة.",
+  "ar": "ضَعِ التُّفّاحة في الحَقيبة."
+ },
+ "where.put.apple.behind.bag": {
+  "en": "Put the apple behind the bag.",
+  "uk": "Поклади яблуко за рюкзак.",
+  "arz": "حُطّ التُّفّاحة وَرا الشَّنْطة.",
+  "ar": "ضَعِ التُّفّاحة خَلْف الحَقيبة."
+ },
+ "where.put.apple.front.bag": {
+  "en": "Put the apple in front of the bag.",
+  "uk": "Поклади яблуко перед рюкзаком.",
+  "arz": "حُطّ التُّفّاحة قُدّام الشَّنْطة.",
+  "ar": "ضَعِ التُّفّاحة أَمام الحَقيبة."
+ },
+ "where.put.apple.next.bag": {
+  "en": "Put the apple next to the bag.",
+  "uk": "Поклади яблуко біля рюкзака.",
+  "arz": "حُطّ التُّفّاحة جَنْب الشَّنْطة.",
+  "ar": "ضَعِ التُّفّاحة بِجانِب الحَقيبة."
+ },
+ "where.put.book.on.table": {
+  "en": "Put the book on the table.",
+  "uk": "Поклади книжку на стіл.",
+  "arz": "حُطّ الكِتاب على التَّرابيزة.",
+  "ar": "ضَعِ الكِتاب على الطّاوِلة."
+ },
+ "where.put.book.under.table": {
+  "en": "Put the book under the table.",
+  "uk": "Поклади книжку під стіл.",
+  "arz": "حُطّ الكِتاب تَحْت التَّرابيزة.",
+  "ar": "ضَعِ الكِتاب تَحْت الطّاوِلة."
+ },
+ "where.put.book.behind.table": {
+  "en": "Put the book behind the table.",
+  "uk": "Поклади книжку за стіл.",
+  "arz": "حُطّ الكِتاب وَرا التَّرابيزة.",
+  "ar": "ضَعِ الكِتاب خَلْف الطّاوِلة."
+ },
+ "where.put.book.front.table": {
+  "en": "Put the book in front of the table.",
+  "uk": "Поклади книжку перед столом.",
+  "arz": "حُطّ الكِتاب قُدّام التَّرابيزة.",
+  "ar": "ضَعِ الكِتاب أَمام الطّاوِلة."
+ },
+ "where.put.book.next.table": {
+  "en": "Put the book next to the table.",
+  "uk": "Поклади книжку біля столу.",
+  "arz": "حُطّ الكِتاب جَنْب التَّرابيزة.",
+  "ar": "ضَعِ الكِتاب بِجانِب الطّاوِلة."
+ },
+ "where.put.book.in.box": {
+  "en": "Put the book in the box.",
+  "uk": "Поклади книжку у коробку.",
+  "arz": "حُطّ الكِتاب جُوّه الكَرْتونة.",
+  "ar": "ضَعِ الكِتاب في الصُّنْدوق."
+ },
+ "where.put.book.behind.box": {
+  "en": "Put the book behind the box.",
+  "uk": "Поклади книжку за коробку.",
+  "arz": "حُطّ الكِتاب وَرا الكَرْتونة.",
+  "ar": "ضَعِ الكِتاب خَلْف الصُّنْدوق."
+ },
+ "where.put.book.front.box": {
+  "en": "Put the book in front of the box.",
+  "uk": "Поклади книжку перед коробкою.",
+  "arz": "حُطّ الكِتاب قُدّام الكَرْتونة.",
+  "ar": "ضَعِ الكِتاب أَمام الصُّنْدوق."
+ },
+ "where.put.book.next.box": {
+  "en": "Put the book next to the box.",
+  "uk": "Поклади книжку біля коробки.",
+  "arz": "حُطّ الكِتاب جَنْب الكَرْتونة.",
+  "ar": "ضَعِ الكِتاب بِجانِب الصُّنْدوق."
+ },
+ "where.put.book.on.chair": {
+  "en": "Put the book on the chair.",
+  "uk": "Поклади книжку на стілець.",
+  "arz": "حُطّ الكِتاب على الكُرْسي.",
+  "ar": "ضَعِ الكِتاب على الكُرْسي."
+ },
+ "where.put.book.under.chair": {
+  "en": "Put the book under the chair.",
+  "uk": "Поклади книжку під стілець.",
+  "arz": "حُطّ الكِتاب تَحْت الكُرْسي.",
+  "ar": "ضَعِ الكِتاب تَحْت الكُرْسي."
+ },
+ "where.put.book.behind.chair": {
+  "en": "Put the book behind the chair.",
+  "uk": "Поклади книжку за стілець.",
+  "arz": "حُطّ الكِتاب وَرا الكُرْسي.",
+  "ar": "ضَعِ الكِتاب خَلْف الكُرْسي."
+ },
+ "where.put.book.front.chair": {
+  "en": "Put the book in front of the chair.",
+  "uk": "Поклади книжку перед стільцем.",
+  "arz": "حُطّ الكِتاب قُدّام الكُرْسي.",
+  "ar": "ضَعِ الكِتاب أَمام الكُرْسي."
+ },
+ "where.put.book.next.chair": {
+  "en": "Put the book next to the chair.",
+  "uk": "Поклади книжку біля стільця.",
+  "arz": "حُطّ الكِتاب جَنْب الكُرْسي.",
+  "ar": "ضَعِ الكِتاب بِجانِب الكُرْسي."
+ },
+ "where.put.book.on.bed": {
+  "en": "Put the book on the bed.",
+  "uk": "Поклади книжку на ліжко.",
+  "arz": "حُطّ الكِتاب على السِّرير.",
+  "ar": "ضَعِ الكِتاب على السَّرير."
+ },
+ "where.put.book.under.bed": {
+  "en": "Put the book under the bed.",
+  "uk": "Поклади книжку під ліжко.",
+  "arz": "حُطّ الكِتاب تَحْت السِّرير.",
+  "ar": "ضَعِ الكِتاب تَحْت السَّرير."
+ },
+ "where.put.book.next.bed": {
+  "en": "Put the book next to the bed.",
+  "uk": "Поклади книжку біля ліжка.",
+  "arz": "حُطّ الكِتاب جَنْب السِّرير.",
+  "ar": "ضَعِ الكِتاب بِجانِب السَّرير."
+ },
+ "where.put.book.in.bag": {
+  "en": "Put the book in the bag.",
+  "uk": "Поклади книжку у рюкзак.",
+  "arz": "حُطّ الكِتاب جُوّه الشَّنْطة.",
+  "ar": "ضَعِ الكِتاب في الحَقيبة."
+ },
+ "where.put.book.behind.bag": {
+  "en": "Put the book behind the bag.",
+  "uk": "Поклади книжку за рюкзак.",
+  "arz": "حُطّ الكِتاب وَرا الشَّنْطة.",
+  "ar": "ضَعِ الكِتاب خَلْف الحَقيبة."
+ },
+ "where.put.book.front.bag": {
+  "en": "Put the book in front of the bag.",
+  "uk": "Поклади книжку перед рюкзаком.",
+  "arz": "حُطّ الكِتاب قُدّام الشَّنْطة.",
+  "ar": "ضَعِ الكِتاب أَمام الحَقيبة."
+ },
+ "where.put.book.next.bag": {
+  "en": "Put the book next to the bag.",
+  "uk": "Поклади книжку біля рюкзака.",
+  "arz": "حُطّ الكِتاب جَنْب الشَّنْطة.",
+  "ar": "ضَعِ الكِتاب بِجانِب الحَقيبة."
+ }
+}

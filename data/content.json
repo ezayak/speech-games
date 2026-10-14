@@ -1,0 +1,40 @@
+{
+  "words": {
+    "cat":   { "pic": "🐱", "tags": ["animal", "where-obj"], "en": { "t": "cat" }, "uk": { "t": "кіт", "acc": "кота" }, "arz": { "t": "قُطّة", "def": "القُطّة" }, "ar": { "t": "قِطّة", "def": "القِطّة" } },
+    "dog":   { "pic": "🐶", "tags": ["animal", "where-obj"], "en": { "t": "dog" }, "uk": { "t": "собака", "acc": "собаку" }, "arz": { "t": "كَلْب", "def": "الكَلْب" }, "ar": { "t": "كَلْب", "def": "الكَلْب" } },
+    "ball":  { "pic": "⚽", "tags": ["toy", "where-obj"], "en": { "t": "ball" }, "uk": { "t": "м'яч", "acc": "м'яч" }, "arz": { "t": "كورة", "def": "الكورة" }, "ar": { "t": "كُرة", "def": "الكُرة" } },
+    "teddy": { "pic": "🧸", "tags": ["toy", "where-obj"], "en": { "t": "teddy bear" }, "uk": { "t": "ведмедик", "acc": "ведмедика" }, "arz": { "t": "دَبْدوب", "def": "الدَّبْدوب" }, "ar": { "t": "دُبّ", "def": "الدُّبّ" } },
+    "apple": { "pic": "🍎", "tags": ["food", "where-obj"], "en": { "t": "apple" }, "uk": { "t": "яблуко", "acc": "яблуко" }, "arz": { "t": "تُفّاحة", "def": "التُّفّاحة" }, "ar": { "t": "تُفّاحة", "def": "التُّفّاحة" } },
+    "book":  { "pic": "📕", "tags": ["school", "where-obj"], "en": { "t": "book" }, "uk": { "t": "книжка", "acc": "книжку" }, "arz": { "t": "كِتاب", "def": "الكِتاب" }, "ar": { "t": "كِتاب", "def": "الكِتاب" } },
+
+    "table": { "pic": "/img/table.svg", "tags": ["home", "where-ref"], "pos": ["on", "under", "behind", "front", "next"],
+      "en": { "t": "table" }, "uk": { "t": "стіл", "loc": "столі", "ins": "столом", "acc": "стіл", "gen": "столу" }, "arz": { "t": "تَرابيزة", "def": "التَّرابيزة" }, "ar": { "t": "طاوِلة", "def": "الطّاوِلة" } },
+    "box":   { "pic": "📦", "tags": ["home", "where-ref"], "pos": ["in", "behind", "front", "next"],
+      "en": { "t": "box" }, "uk": { "t": "коробка", "loc": "коробці", "ins": "коробкою", "acc": "коробку", "gen": "коробки" }, "arz": { "t": "كَرْتونة", "def": "الكَرْتونة" }, "ar": { "t": "صُنْدوق", "def": "الصُّنْدوق" } },
+    "chair": { "pic": "🪑", "tags": ["home", "where-ref"], "pos": ["on", "under", "behind", "front", "next"],
+      "en": { "t": "chair" }, "uk": { "t": "стілець", "loc": "стільці", "ins": "стільцем", "acc": "стілець", "gen": "стільця" }, "arz": { "t": "كُرْسي", "def": "الكُرْسي" }, "ar": { "t": "كُرْسي", "def": "الكُرْسي" } },
+    "bed":   { "pic": "🛏️", "tags": ["home", "where-ref"], "pos": ["on", "under", "next"],
+      "en": { "t": "bed" }, "uk": { "t": "ліжко", "loc": "ліжку", "ins": "ліжком", "acc": "ліжко", "gen": "ліжка" }, "arz": { "t": "سِرير", "def": "السِّرير" }, "ar": { "t": "سَرير", "def": "السَّرير" } },
+    "bag":   { "pic": "🎒", "tags": ["school", "where-ref"], "pos": ["in", "behind", "front", "next"],
+      "en": { "t": "bag" }, "uk": { "t": "рюкзак", "loc": "рюкзаку", "ins": "рюкзаком", "acc": "рюкзак", "gen": "рюкзака" }, "arz": { "t": "شَنْطة", "def": "الشَّنْطة" }, "ar": { "t": "حَقيبة", "def": "الحَقيبة" } }
+  },
+
+  "positions": {
+    "in":     { "en": "in",          "uk": { "w": "у",     "at": "у {loc}",     "to": "у {acc}" },     "arz": "جُوّه",  "ar": "في" },
+    "on":     { "en": "on",          "uk": { "w": "на",    "at": "на {loc}",    "to": "на {acc}" },    "arz": "على",   "ar": "على" },
+    "under":  { "en": "under",       "uk": { "w": "під",   "at": "під {ins}",   "to": "під {acc}" },   "arz": "تَحْت",  "ar": "تَحْت" },
+    "behind": { "en": "behind",      "uk": { "w": "за",    "at": "за {ins}",    "to": "за {acc}" },    "arz": "وَرا",   "ar": "خَلْف" },
+    "front":  { "en": "in front of", "uk": { "w": "перед", "at": "перед {ins}", "to": "перед {ins}" }, "arz": "قُدّام", "ar": "أَمام" },
+    "next":   { "en": "next to",     "uk": { "w": "біля",  "at": "біля {gen}",  "to": "біля {gen}" },  "arz": "جَنْب",  "ar": "بِجانِب" }
+  },
+
+  "templates": {
+    "where.at":  { "en": "The {obj} is {pos} the {ref}.",  "uk": "{Obj} {pos}.",              "arz": "{obj} {pos} {ref}.",      "ar": "{obj} {pos} {ref}." },
+    "where.put": { "en": "Put the {obj} {pos} the {ref}.", "uk": "Поклади {objAcc} {posTo}.", "arz": "حُطّ {obj} {pos} {ref}.", "ar": "ضَعِ {obj} {pos} {ref}." }
+  },
+
+  "phrases": {
+    "great": { "en": "Well done!",    "uk": "Молодець!",        "arz": "شاطِر!",       "ar": "أَحْسَنْت!" },
+    "again": { "en": "Listen again.", "uk": "Послухай ще раз.", "arz": "اِسْمَع تاني.", "ar": "اِسْتَمِعْ مَرّةً أُخْرى." }
+  }
+}
