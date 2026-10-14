@@ -68,3 +68,16 @@ header h1 { flex: 1; margin: 0; font-size: 1.6rem; }
 .learn-sentence { font-size: 1.8rem; background: none; border: none; color: var(--ink); padding: 4px 16px; }
 .learn-nav { display: flex; gap: 16px; }
 .big:disabled { opacity: .3; }
+
+.groups { display: flex; gap: 8px; justify-content: center; }
+.groups button { font-size: 1.8rem; padding: 6px 14px; border-radius: 14px;
+  border: 3px solid transparent; background: var(--card); }
+.groups button.on { border-color: var(--speaking); }
+
+.phrase-learn { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.phrase-pic { font-size: 8rem; line-height: 1; background: var(--card); border: none;
+  border-radius: 32px; padding: 24px 40px; }
+.phrase-words { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.word { font-size: 2.2rem; padding: 8px 18px; border-radius: 16px; border: 2px solid #e2ddd2;
+  background: var(--card); color: var(--ink); }
+.pic-choice { font-size: 6rem; background: var(--card); aspect-ratio: 4 / 3; }

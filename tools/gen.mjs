@@ -6,7 +6,9 @@ import path from 'node:path';
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const content = JSON.parse(fs.readFileSync(path.join(root, 'data/content.json'), 'utf8'));
 
-const VOICES = { en: 'en-US-AnaNeural', uk: 'uk-UA-PolinaNeural', arz: 'ar-EG-SalmaNeural', ar: 'ar-EG-SalmaNeural' };
+const VOICES = { en: 'en-US-AnaNeural', uk: 'uk-UA-OstapNeural', arz: 'ar-EG-ShakirNeural', ar: 'ar-EG-SalmaNeural' };
+// Egyptian sounds more natural without vowel marks (voice test, 2026-10-14); the screen text keeps them.
+const spoken = (lang, text) => lang === 'arz' ? text.replace(/[\u064B-\u0652]/g, '') : text;
 const XML_LANG = { en: 'en-US', uk: 'uk-UA', arz: 'ar-EG', ar: 'ar-EG' };
 const LANGS = Object.keys(VOICES);
 
@@ -41,6 +43,14 @@ for (const [tid, tpl] of Object.entries(content.templates)) {
   }
 }
 
+// Sentences: the whole phrase plus each word card, so cards can speak on their own.
+for (const [id, s] of Object.entries(content.sentences ?? {})) {
+  phrases[`say.${id}`] = Object.fromEntries(LANGS.map(l => [l, s[l].join(' ')]));
+  for (const l of LANGS) s[l].forEach((tok, i) => {
+    (phrases[`say.${id}.${i}`] ??= {})[l] = tok;
+  });
+}
+
 fs.writeFileSync(path.join(root, 'data/phrases.json'), JSON.stringify(phrases, null, 1));
 console.log(`phrases.json: ${Object.keys(phrases).length} phrases`);
 
@@ -51,8 +61,12 @@ const manifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manife
 
 const todo = [];
 for (const [id, t] of Object.entries(phrases)) for (const l of LANGS) {
+  // Word cards exist only in languages that have that many words.
+  if (!(l in t)) continue;
   const key = `${l}/${id}`;
-  if (manifest[key] !== t[l] || !fs.existsSync(path.join(audioDir, `${key}.mp3`))) todo.push({ key, lang: l, text: t[l] });
+  // The manifest remembers voice + text, so changing either remakes the file.
+  const made = `${VOICES[l]}|${spoken(l, t[l])}`;
+  if (manifest[key] !== made || !fs.existsSync(path.join(audioDir, `${key}.mp3`))) todo.push({ key, lang: l, text: spoken(l, t[l]), made });
 }
 console.log(`audio: ${todo.length} files missing or changed`);
 
@@ -88,11 +102,11 @@ async function synth(lang, text) {
 }
 
 let done = 0;
-for (const { key, lang, text } of todo) {
+for (const { key, lang, text, made } of todo) {
   const file = path.join(audioDir, `${key}.mp3`);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, await synth(lang, text));
-  manifest[key] = text;
+  manifest[key] = made;
   // Save progress after every file so an interrupted run resumes where it stopped.
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 1));
   console.log(`${++done}/${todo.length} ${key}`);

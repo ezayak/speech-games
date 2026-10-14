@@ -1,6 +1,7 @@
 import './style.css';
 import { el } from './ui/dom';
 import { startWhere } from './games/where';
+import { startWant } from './games/want';
 
 export type Lang = 'en' | 'uk' | 'arz' | 'ar';
 
@@ -27,6 +28,7 @@ const CATEGORIES: Category[] = [
     { id: 'taste', icon: '🍋', name: 'Taste It', ready: false },
   ]},
   { id: 'speaking', icon: '🗣️', name: 'Speaking', games: [
+    { id: 'want', icon: '🙋', name: 'I Want…', ready: true },
     { id: 'say-it', icon: '💬', name: 'Say It', ready: false },
     { id: 'finish', icon: '✏️', name: 'Finish the Sentence', ready: false },
     { id: 'tell-me', icon: '🖼️', name: 'Tell Me About It', ready: false },
@@ -104,6 +106,7 @@ function showCategory(c: Category) {
 function startGame(id: string, c: Category) {
   const back = () => showCategory(c);
   if (id === 'where') startWhere(app, lang, back);
+  if (id === 'want') startWant(app, lang, back);
 }
 
 showHome();
