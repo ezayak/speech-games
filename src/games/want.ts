@@ -2,9 +2,10 @@ import type { Lang } from '../main';
 import { pick, shuffle, sentences, type Sentence } from '../core/content';
 import { play, stop } from '../core/audio';
 import { levelFor } from '../core/level';
+import { makeDraggable } from '../core/drag';
 import { el } from '../ui/dom';
 
-type Mode = 'learn' | 'listen' | 'say';
+type Mode = 'learn' | 'listen' | 'say' | 'build';
 type Group = 'all' | 'action' | 'thing' | 'feel' | 'social';
 
 const GROUPS: { id: Group; icon: string }[] = [
@@ -19,6 +20,8 @@ const wait = (ms: number) => new Promise(r => setTimeout(r, ms));
 
 export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   const level = levelFor('want', lang);
+  const buildLevel = levelFor('want-build', lang);
+  const lvl = () => (mode === 'build' ? buildLevel : level);
   let mode: Mode = 'learn';
   let group: Group = 'all';
   let round = 0, stars = 0;
@@ -29,7 +32,7 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   const back = el('button', 'back', '←');
   const modes = el('div', 'modes');
   const modeBtns: Record<Mode, HTMLButtonElement> = {
-    learn: el('button', '', '📖'), listen: el('button', '', '👂'), say: el('button', '', '🗣'),
+    learn: el('button', '', '📖'), listen: el('button', '', '👂'), say: el('button', '', '🗣'), build: el('button', '', '🧩'),
   };
   for (const [m, b] of Object.entries(modeBtns)) {
     b.onclick = () => setMode(m as Mode);
@@ -67,15 +70,22 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
   const pool = () => group === 'all' ? sentences : sentences.filter(s => s.group === group);
 
   let order: Sentence[] = [];
-  function restart() { round = 0; stars = 0; order = shuffle(pool()); next(); }
+  function restart() {
+    round = 0;
+    stars = 0;
+    // One-word phrases ("Stop") can't be built.
+    order = shuffle(mode === 'build' ? pool().filter(s => s.tokens[lang].length > 1) : pool());
+    next();
+  }
 
   function next() {
     token++;
     if (mode === 'learn') return learnScreen(0);
-    badge.textContent = mode === 'say' ? '' : '●'.repeat(level.value) + '○'.repeat(3 - level.value);
+    badge.textContent = mode === 'say' ? '' : '●'.repeat(lvl().value) + '○'.repeat(3 - lvl().value);
     fill.style.width = `${(round / ROUNDS) * 100}%`;
     if (round >= ROUNDS) showEnd();
     else if (mode === 'say') sayRound();
+    else if (mode === 'build') buildRound();
     else listenRound();
   }
 
@@ -214,6 +224,80 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     const card = el('div', 'phrase-learn');
     card.append(el('div', 'phrase-pic', s.pic), words, parent);
     stage.replaceChildren(card);
+  }
+
+  // Build: put the word cards in order; touching a card says it; a wrong card makes the right one pulse.
+  function buildRound() {
+    const t = token;
+    const s = order[round % order.length];
+    const id = `say.${s.id}`;
+    const tokens = s.tokens[lang];
+    const L = buildLevel.value;
+    const fixed = L === 1 ? Math.max(0, tokens.length - 2) : 0;
+    let nextSlot = fixed;
+    let firstTry = true;
+    say = () => play(id, lang);
+
+    const dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    const slots = el('div', 'phrase-words slots');
+    slots.dir = dir;
+    const slotEls = tokens.map((w, k) => {
+      const c = el('div', k < fixed ? 'slot filled' : 'slot', k < fixed ? w : '');
+      slots.append(c);
+      return c;
+    });
+
+    const cards = tokens.slice(fixed).map((w, k) => ({ w, audio: `${id}.${k + fixed}` }));
+    // Level 3 adds one word from another phrase that isn't in this one.
+    if (L === 3) {
+      cards.push(...pick(sentences.flatMap(x => x.tokens[lang].map((w, j) => ({ w, audio: `say.${x.id}.${j}` })))
+        .filter(c => !tokens.includes(c.w)), 1));
+    }
+    const tray = el('div', 'tray build-tray');
+    tray.dir = dir;
+    const onSlots = (x: number, y: number) => {
+      const r = slots.getBoundingClientRect();
+      return x > r.left - 40 && x < r.right + 40 && y > r.top - 60 && y < r.bottom + 60;
+    };
+    const els: HTMLElement[] = [];
+    for (const c of shuffle(cards)) {
+      const card = el('div', 'item word-card', c.w);
+      card.addEventListener('pointerdown', () => play(c.audio, lang));
+      makeDraggable(card, slots, (x, y) => {
+        if (!onSlots(x, y) || nextSlot >= tokens.length) return;
+        if (c.w === tokens[nextSlot]) {
+          slotEls[nextSlot].textContent = c.w;
+          slotEls[nextSlot].classList.add('filled');
+          card.remove();
+          if (++nextSlot === tokens.length) complete();
+          return;
+        }
+        firstTry = false;
+        const right = els.find(e => e.isConnected && e.textContent === tokens[nextSlot]);
+        right?.classList.remove('pulse');
+        void right?.offsetWidth;
+        right?.classList.add('pulse');
+        play(`${id}.${nextSlot}`, lang);
+      });
+      els.push(card);
+      tray.append(card);
+    }
+
+    async function complete() {
+      if (firstTry) stars++;
+      buildLevel.record(firstTry);
+      await play(id, lang);
+      await play('ui.great', lang);
+      await wait(400);
+      if (t !== token) return;
+      round++;
+      next();
+    }
+
+    const card = el('div', 'phrase-learn build');
+    card.append(el('div', 'phrase-pic', s.pic), slots, tray);
+    stage.replaceChildren(card);
+    say();
   }
 
   function showEnd() {
