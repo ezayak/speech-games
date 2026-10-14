@@ -152,43 +152,39 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     say();
   }
 
-  // Say it: Alex names the picture; each 💡 reveals and plays one more word; the parent judges.
+  // Say it: Alex names the picture; each ⋯ box shows and says its word; the parent judges.
   function sayRound() {
     const t = token;
     const s = order[round % order.length];
     const id = `say.${s.id}`;
     const tokens = s.tokens[lang];
-    let shown = 0;
+    const open = new Set<number>();
     say = () => Promise.resolve();
 
     const words = el('div', 'phrase-words');
     words.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
-    const cards = tokens.map(() => {
+    const show = (k: number) => {
+      open.add(k);
+      cards[k].textContent = tokens[k];
+      cards[k].classList.remove('hidden');
+      // 🔊 replays the open words in sentence order, or the whole phrase once all are open.
+      const ks = [...open].sort((a, b) => a - b);
+      say = open.size === tokens.length
+        ? () => play(id, lang)
+        : async () => {
+          for (const j of ks) if (t === token) await play(`${id}.${j}`, lang);
+        };
+    };
+    // Touching a box shows its word and says it.
+    const cards = tokens.map((_, k) => {
       const c = el('button', 'word hidden', '⋯');
+      c.onclick = () => {
+        show(k);
+        play(`${id}.${k}`, lang);
+      };
       words.append(c);
       return c;
     });
-    const reveal = (n: number) => {
-      shown = n;
-      cards.slice(0, n).forEach((c, k) => {
-        c.textContent = tokens[k];
-        c.classList.remove('hidden');
-        c.onclick = () => play(`${id}.${k}`, lang);
-      });
-      // Partial hints play word by word; the last one plays the whole phrase.
-      say = n === tokens.length
-        ? () => play(id, lang)
-        : async () => {
-          for (let k = 0; k < n && t === token; k++) await play(`${id}.${k}`, lang);
-        };
-    };
-
-    const hint = el('button', 'big', '💡');
-    hint.onclick = () => {
-      reveal(Math.min(shown + 1, tokens.length));
-      hint.disabled = shown === tokens.length;
-      say();
-    };
 
     const advance = async () => {
       await wait(400);
@@ -197,17 +193,17 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
       next();
     };
     const good = el('button', '', '😀'), almost = el('button', '', '🙂'), skip = el('button', '', '➡');
-    const lock = () => { good.disabled = almost.disabled = skip.disabled = hint.disabled = true; };
+    const lock = () => { good.disabled = almost.disabled = skip.disabled = true; };
     good.onclick = async () => {
       lock();
-      if (shown === 0) stars++;
+      if (open.size === 0) stars++;
       await play('ui.great', lang);
       await play(id, lang);
       advance();
     };
     almost.onclick = async () => {
       lock();
-      reveal(tokens.length);
+      tokens.forEach((_, k) => show(k));
       await play(id, lang);
       advance();
     };
@@ -216,7 +212,7 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     parent.append(good, almost, skip);
 
     const card = el('div', 'phrase-learn');
-    card.append(el('div', 'phrase-pic', s.pic), words, hint, parent);
+    card.append(el('div', 'phrase-pic', s.pic), words, parent);
     stage.replaceChildren(card);
   }
 
