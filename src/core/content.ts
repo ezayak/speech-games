@@ -17,6 +17,7 @@ export const sentences: Sentence[] = Object.entries(content.sentences as Record<
 export const byTag = (tag: string) => words.filter(w => w.tags.includes(tag));
 
 const table = phrases as Record<string, Partial<Record<Lang, string>>>;
+export const phraseIds = Object.keys(table);
 export const text = (id: string, lang: Lang) => table[id]?.[lang] ?? '';
 
 export function shuffle<T>(a: T[]): T[] {

@@ -4,6 +4,17 @@ import type { Lang } from '../main';
 const player = new Audio();
 let finish: (() => void) | null = null;
 
+// Family recordings (public/rec) replace generated audio; the value is the save time.
+let recorded: Record<string, number> = {};
+fetch(`${import.meta.env.BASE_URL}rec/index.json`)
+  .then(r => r.json()).then(r => { recorded = r; }).catch(() => {});
+
+export const recordedAt = (key: string) => recorded[key];
+export function setRecorded(key: string, time: number | null) {
+  if (time) recorded[key] = time;
+  else delete recorded[key];
+}
+
 export function play(id: string, lang: Lang): Promise<void> {
   finish?.();
   return new Promise(resolve => {
@@ -18,7 +29,11 @@ export function play(id: string, lang: Lang): Promise<void> {
     finish = done;
     player.onended = done;
     player.onerror = done;
-    player.src = `${import.meta.env.BASE_URL}audio/${lang}/${id}.mp3`;
+    const key = `${lang}/${id}`;
+    // ?v= makes the browser fetch a re-recorded file instead of an old copy.
+    player.src = recorded[key]
+      ? `${import.meta.env.BASE_URL}rec/${key}.mp3?v=${recorded[key]}`
+      : `${import.meta.env.BASE_URL}audio/${key}.mp3`;
     player.play().catch(done);
   });
 }

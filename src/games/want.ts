@@ -1,10 +1,10 @@
 import type { Lang } from '../main';
-import { pick, shuffle, sentences } from '../core/content';
+import { pick, shuffle, sentences, type Sentence } from '../core/content';
 import { play, stop } from '../core/audio';
 import { levelFor } from '../core/level';
 import { el } from '../ui/dom';
 
-type Mode = 'learn' | 'listen';
+type Mode = 'learn' | 'listen' | 'say';
 type Group = 'all' | 'action' | 'thing' | 'feel' | 'social';
 
 const GROUPS: { id: Group; icon: string }[] = [
@@ -28,7 +28,9 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
 
   const back = el('button', 'back', '←');
   const modes = el('div', 'modes');
-  const modeBtns: Record<Mode, HTMLButtonElement> = { learn: el('button', '', '📖'), listen: el('button', '', '👂') };
+  const modeBtns: Record<Mode, HTMLButtonElement> = {
+    learn: el('button', '', '📖'), listen: el('button', '', '👂'), say: el('button', '', '🗣'),
+  };
   for (const [m, b] of Object.entries(modeBtns)) {
     b.onclick = () => setMode(m as Mode);
     modes.append(b);
@@ -64,14 +66,16 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
 
   const pool = () => group === 'all' ? sentences : sentences.filter(s => s.group === group);
 
-  function restart() { round = 0; stars = 0; next(); }
+  let order: Sentence[] = [];
+  function restart() { round = 0; stars = 0; order = shuffle(pool()); next(); }
 
   function next() {
     token++;
     if (mode === 'learn') return learnScreen(0);
-    badge.textContent = '●'.repeat(level.value) + '○'.repeat(3 - level.value);
+    badge.textContent = mode === 'say' ? '' : '●'.repeat(level.value) + '○'.repeat(3 - level.value);
     fill.style.width = `${(round / ROUNDS) * 100}%`;
     if (round >= ROUNDS) showEnd();
+    else if (mode === 'say') sayRound();
     else listenRound();
   }
 
@@ -146,6 +150,74 @@ export function startWant(app: HTMLElement, lang: Lang, onExit: () => void) {
     }
     stage.replaceChildren(grid);
     say();
+  }
+
+  // Say it: Alex names the picture; each 💡 reveals and plays one more word; the parent judges.
+  function sayRound() {
+    const t = token;
+    const s = order[round % order.length];
+    const id = `say.${s.id}`;
+    const tokens = s.tokens[lang];
+    let shown = 0;
+    say = () => Promise.resolve();
+
+    const words = el('div', 'phrase-words');
+    words.dir = RTL.includes(lang) ? 'rtl' : 'ltr';
+    const cards = tokens.map(() => {
+      const c = el('button', 'word hidden', '⋯');
+      words.append(c);
+      return c;
+    });
+    const reveal = (n: number) => {
+      shown = n;
+      cards.slice(0, n).forEach((c, k) => {
+        c.textContent = tokens[k];
+        c.classList.remove('hidden');
+        c.onclick = () => play(`${id}.${k}`, lang);
+      });
+      // Partial hints play word by word; the last one plays the whole phrase.
+      say = n === tokens.length
+        ? () => play(id, lang)
+        : async () => {
+          for (let k = 0; k < n && t === token; k++) await play(`${id}.${k}`, lang);
+        };
+    };
+
+    const hint = el('button', 'big', '💡');
+    hint.onclick = () => {
+      reveal(Math.min(shown + 1, tokens.length));
+      hint.disabled = shown === tokens.length;
+      say();
+    };
+
+    const advance = async () => {
+      await wait(400);
+      if (t !== token) return;
+      round++;
+      next();
+    };
+    const good = el('button', '', '😀'), almost = el('button', '', '🙂'), skip = el('button', '', '➡');
+    const lock = () => { good.disabled = almost.disabled = skip.disabled = hint.disabled = true; };
+    good.onclick = async () => {
+      lock();
+      if (shown === 0) stars++;
+      await play('ui.great', lang);
+      await play(id, lang);
+      advance();
+    };
+    almost.onclick = async () => {
+      lock();
+      reveal(tokens.length);
+      await play(id, lang);
+      advance();
+    };
+    skip.onclick = () => { lock(); advance(); };
+    const parent = el('div', 'parent-row');
+    parent.append(good, almost, skip);
+
+    const card = el('div', 'phrase-learn');
+    card.append(el('div', 'phrase-pic', s.pic), words, hint, parent);
+    stage.replaceChildren(card);
   }
 
   function showEnd() {

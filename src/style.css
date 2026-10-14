@@ -81,3 +81,22 @@ header h1 { flex: 1; margin: 0; font-size: 1.6rem; }
 .word { font-size: 2.2rem; padding: 8px 18px; border-radius: 16px; border: 2px solid #e2ddd2;
   background: var(--card); color: var(--ink); }
 .pic-choice { font-size: 6rem; background: var(--card); aspect-ratio: 4 / 3; }
+
+.rec-open { font-size: 1.6rem; padding: 8px 12px; border-radius: 12px; border: 2px solid var(--muted); background: var(--card); }
+.rec-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.rec-tabs button { font-size: 1.1rem; padding: 8px 14px; border-radius: 12px; border: 2px solid transparent; background: var(--card); }
+.rec-tabs button.on { border-color: var(--ink); }
+.rec-list { display: flex; flex-direction: column; gap: 6px; max-width: 900px; width: 100%; margin: 0 auto; }
+.rec-row { display: flex; align-items: center; gap: 8px; background: var(--card); border-radius: 12px; padding: 6px 10px; }
+.rec-row.card { margin-inline-start: 32px; opacity: .85; }
+.rec-row .rec-text { flex: 1; font-size: 1.3rem; }
+.rec-row button { font-size: 1.4rem; padding: 6px 10px; border-radius: 10px; border: none; background: #f0ece4; }
+.rec-row.mine .rec-text::after { content: " ✓"; color: var(--speaking); }
+.rec-row:not(.mine) .rec-del { visibility: hidden; }
+.rec-row.recording { outline: 3px solid var(--school); }
+
+.word.hidden { color: var(--muted); min-width: 4rem; }
+.parent-row { display: flex; gap: 12px; justify-content: center; padding-top: 12px;
+  border-top: 2px dashed #e2ddd2; }
+.parent-row button { font-size: 2.4rem; padding: 8px 24px; border-radius: 16px; border: none; background: var(--card); }
+.parent-row button:disabled { opacity: .4; }

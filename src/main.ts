@@ -2,6 +2,7 @@ import './style.css';
 import { el } from './ui/dom';
 import { startWhere } from './games/where';
 import { startWant } from './games/want';
+import { startRecorder } from './parent/recorder';
 
 export type Lang = 'en' | 'uk' | 'arz' | 'ar';
 
@@ -89,6 +90,12 @@ function tile(icon: string, name: string, color: string, onTap?: () => void): HT
 
 function showHome() {
   app.replaceChildren(header('Speech Games'));
+  // Recording saves files into the project, so it only exists on the computer's dev server.
+  if (import.meta.env.DEV) {
+    const r = el('button', 'rec-open', '🎙');
+    r.onclick = () => startRecorder(app, lang, showHome);
+    app.querySelector('header')!.append(r);
+  }
   const grid = el('div', 'grid');
   for (const c of CATEGORIES) grid.append(tile(c.icon, c.name, `var(--${c.id})`, () => showCategory(c)));
   app.append(grid);
